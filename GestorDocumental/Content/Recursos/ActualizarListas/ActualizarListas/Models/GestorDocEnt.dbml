@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GestorDocumentalGNF" Class="GestorDocEntDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=7.215.8.30;Initial Catalog=GestorDocumentalGNF;Persist Security Info=True;User ID=sa" SettingsObjectName="ActualizarListas.Properties.Settings" SettingsPropertyName="GestorDocumentalGNFConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Campos" Member="Campos">
+    <Type Name="Campos">
+      <Column Name="CampId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CampDescripcion" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="idPadre" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NomBizagi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TablaBizagi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CampAlto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CampAncho" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CampOrden" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CampNumCaptura" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CampNumCaptura2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ControlCalidad" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CampObligatorio" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TcId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GDocId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CampDependiente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GruId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Activo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ColConciliacion" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="LongMax" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SelectIndex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ValidationFunction" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ErrorMessage" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PosX" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PosY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CodFormulario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Campos_Campos" Member="Campos2" ThisKey="CampId" OtherKey="idPadre" Type="Campos" />
+      <Association Name="Campos_CodigosCampo" Member="CodigosCampo" ThisKey="CampId" OtherKey="CampId" Type="CodigosCampo" />
+      <Association Name="Campos_Campos" Member="Campos1" ThisKey="idPadre" OtherKey="CampId" Type="Campos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.P_Ciudad" Member="P_Ciudad">
+    <Type Name="P_Ciudad">
+      <Column Name="CiuId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CiuNombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="DeptId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Activo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CodigosCampo" Member="CodigosCampo">
+    <Type Name="CodigosCampo">
+      <Column Name="CodCampId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CodId" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CodDescripcion" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CampId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CodOrden" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Activo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CodPadre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Campos_CodigosCampo" Member="Campos" ThisKey="CampId" OtherKey="CampId" Type="Campos" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

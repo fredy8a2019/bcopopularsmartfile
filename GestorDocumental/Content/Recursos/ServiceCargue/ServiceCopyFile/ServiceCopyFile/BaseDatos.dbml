@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GestorDocumental" Class="BaseDatosDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=12.109.8.55;Initial Catalog=GestorDocumental;Persist Security Info=True;User ID=Bizagi" SettingsObjectName="ServiceCopyFile.Properties.Settings" SettingsPropertyName="GestorDocumentalConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Parametros" Member="Parametros">
+    <Type Name="Parametros">
+      <Column Name="id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="codigo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="valor" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

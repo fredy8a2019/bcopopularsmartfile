@@ -1,0 +1,14 @@
+12/04/2016 10:40:46 a. m. Error en RadicacionController metodo Guardar No se reconoce la cadena como un valor de DateTime válido. Hay una palabra desconocida a partir del índice 20. linea    en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.DateTime.Parse(String s)
+   en GestorDocumental.Controllers.RadicacionController.Guardar(FormCollection collection)Usuario1010197094
+12/04/2016 12:02:13 p. m. Error en RadicacionController metodo Guardar No se reconoce la cadena como un valor de DateTime válido. Hay una palabra desconocida a partir del índice 20. linea    en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en GestorDocumental.Controllers.RadicacionController.Guardar(FormCollection collection)Usuario1010197094
+12/04/2016 12:33:20 p. m. Error en RadicacionController metodo Guardar data.FechaLocal: 12/04/2016 12:31:18 p. m. ;data.FechaRadicacion: 12/04/2016 12:33:20 p. m.
+12/04/2016 12:35:37 p. m. Error en RadicacionController metodo Guardar No se reconoce la cadena como un valor de DateTime válido. Hay una palabra desconocida a partir del índice 20. linea    en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en GestorDocumental.Controllers.RadicacionController.Guardar(FormCollection collection)Usuario1010197094
+12/04/2016 12:48:22 p. m. RadicacionController metodo Guardar data.FechaLocal: 12/4/2016, 12:48:02 p.m. ;data.FechaRadicacion: 12/04/2016 12:48:22 p. m.
+12/04/2016 12:48:22 p. m. Error en RadicacionController metodo Guardar No se reconoce la cadena como un valor de DateTime válido. Hay una palabra desconocida a partir del índice 20. linea    en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en GestorDocumental.Controllers.RadicacionController.Guardar(FormCollection collection)Usuario1010197094

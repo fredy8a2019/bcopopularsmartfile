@@ -1,0 +1,335 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<DOCTYPE html>
+<html>
+<head runat="server">
+
+    <!--Responsive-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+
+    <script src="../../Content/Scripts/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <link href="../../Content/themes/responsive/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../Content/themes/responsive/css/sb-admin.css" rel="stylesheet" />
+    <link href="../../Content/themes/responsive/css/plugins/morris.css" rel="stylesheet" />
+    <link href="../../Content/themes/responsive/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="../../Content/Styles/impromptu.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="../../Content/Scripts/jquery-impromptu.4.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <link href="../../Content/themes/responsive/css/plugins/default.css" rel="stylesheet" />
+    <link href="../../Content/themes/responsive/css/plugins/component.css" rel="stylesheet" />
+    <script src="../../Content/themes/responsive/js/plugins/modernizr.custom.js"></script>
+
+    <link href="../../Content/2013.1.219/telerik.common.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/2013.1.219/telerik.simple.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/2013.1.219/telerik.rtl.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="../../Styles/BootsTrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/BootsTrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="../../Scripts/Reestricciones.js"></script>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script src="../../Content/Scripts/Page/ajax.js" type="text/javascript"></script>
+    <script src="../../Content/Scripts/Page/_ui.js" type="text/javascript"></script>
+    <script>
+        (function () {
+            var _default = {
+
+                loagPage: function () {
+                },
+
+                init: function () {
+                    var usu = '<%=Session["USUARIO_LOGUEADO"]%>';
+                    transact.ajaxGET("/Menu/ObtenerPadresMvc1?Usuarios=" + usu, null, _default.success, _default.error);
+                },
+
+                success: function (data) {
+                    _ui.crearMenuMaster(data, $("#menu"));
+                },
+
+                error: function (error) {
+                    console.log(error);
+                }
+            }
+
+            _default.init();
+            _default.loagPage();
+        })();
+
+        var pepe;
+        function ini() {
+            var idetapa = '<%=Session["idETAPA"]%>';
+            
+            if (idetapa=='260') {
+                pepe = setTimeout(function () {
+                    window.location.href = '/Seguridad/Login';
+                }, 420000); // 5 minutos 
+            } else {
+                pepe = setTimeout(function () {
+                    window.location.href = '/Seguridad/Login';
+                }, 300000); // 5 minutos 
+            }         
+
+        }
+
+        function parar() {
+            clearTimeout(pepe);
+            var idetapa = '<%=Session["idETAPA"]%>';
+            if (idetapa == '260') {
+                pepe = setTimeout(function () {
+                    window.location.href = '/Seguridad/Login';
+                }, 420000); // 5 minutos 
+            } else {
+                pepe = setTimeout(function () {
+                    window.location.href = '/Seguridad/Login';
+                }, 300000); // 5 minutos 
+            }
+        }
+    </script>
+    <style>
+        .navbar-brand img {
+            height: 60px;
+            margin-top: -7px;
+        }
+
+        @media(max-width:640px) {
+            #datos {
+                display: none;
+            }
+
+            .navbar-brand img {
+                height: 50px;
+            }
+        }
+
+        a img {
+            height: 30px;
+        }
+
+        .staticItem img {
+            width: 30px;
+        }
+
+        #menu {
+            margin-top: 2px;
+        }
+
+        .staticItem {
+            background-image: url(../../Images/IconosMenu/Boton.png) !important;
+            background-repeat: no-repeat;
+            /*background-position: center;*/
+            /*padding-right: 14px;*/
+            margin-left: 0px;
+            width: 200px;
+            display: block;
+            height: 50px;
+        }
+
+        .itemSelect {
+            background-color: #9aad04;
+            /*font-size: 14px;
+            font-weight: bold;*/
+            /*padding-top: 2px;
+            padding-bottom: 6px;
+            padding-left: 10px;*/
+            width: auto;
+            margin-left: 15px;
+            margin-right: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            /*white-space: nowrap;*/
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+            display: block;
+        }
+
+            .itemSelect:Hover {
+                background-color: #6785C1;
+            }
+
+
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 999; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+        }
+    </style>
+    <link href="../../Styles/easyTree.css" rel="stylesheet" type="text/css" />
+    <script src="../../Scripts/easyTree.js"></script>
+</head>
+<body style="background-color: white;" class="style-3" onload="ini()" onkeypress="parar()" onclick="parar()">
+
+    <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left style-3" id="cbp-spmenu-s1">
+        <ul class="nav navbar-nav side-nav" id="menu" style="margin-top: 100px;">
+            <li id="liPadre000">
+                <a class="staticItem" href="/Home/Index" id="link000">
+                    <img src="../../../Images/IconosMenu/Home.png">Inicio</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <form id="form1" runat="server">
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="showLeftPush" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" rel="home" href="#" title="Buy Sell Rent Everyting">
+                        <img id="Logo" src="../../Images/MpLogoGestor.png">
+                    </a>
+                </div>
+                <!-- Top Menu Items -->
+                <ul class="nav navbar-right top-nav">
+                    <li class="dropdown" style="float: right;">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 15px; float: right;"><i class="fa fa-user"></i><%=Session["NombreUsuario"]%><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <%--<a href="#"><i class="fa fa-fw fa-power-off"></i>Cerrar Sesión</a>--%>
+                                <asp:LinkButton ID="btnSalir" runat="server" CausesValidation="False" PostBackUrl="/Seguridad/Logout"
+                                    Font-Size="Large" ClientIDMode="Static"><i class="fa fa-fw fa-power-off"></i>Cerrar Sesión</asp:LinkButton>
+                            </li>
+                        </ul>
+                        &nbsp;
+                        <label id="datos" style="font-size: 13px; float: right; margin-top: 12px; margin-right: 5px;"><i class="fa fa-group"></i><%=((GestorDocumental.Models.Clientes)Session["CLIENTE"]).CliNombre%> : <i class="fa fa-check"></i><%=Session["TotalCapturas"]%></label>
+                        <%--<a style="font-size: 13px; float: right;"></a>--%>                        
+                    </li>
+                </ul>
+                <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </nav>
+        </form>
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="myModal" class="modal"></div>
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+        <footer>
+            <center><h5>© Copyright <%= DateTime.Now.Year %> everis group</h5></center>
+        </footer>
+
+    </div>
+
+
+    <script src="../../Content/themes/responsive/js/jquery.js"></script>
+    <script src="../../Content/themes/responsive/js/bootstrap.min.js"></script>
+    <script src="../../Styles/BootsTrap/js/bootbox.js"></script>
+
+    <script src="../../Content/themes/responsive/js/plugins/classie.js"></script>
+    <script>
+        var menuLeft = document.getElementById('cbp-spmenu-s1'),
+            showLeftPush = document.getElementById('showLeftPush'),
+            modal = document.getElementById('myModal'),
+            body = document.body;
+
+        modal.onclick = function () {
+            classie.toggle(this, 'active');
+            classie.toggle(body, 'cbp-spmenu-push-toright');
+            classie.toggle(menuLeft, 'cbp-spmenu-open');
+            disableOther('showLeftPush');
+
+            $("#myModal").css("display", "none");
+
+        };
+
+        showLeftPush.onclick = function () {
+            classie.toggle(this, 'active');
+            classie.toggle(body, 'cbp-spmenu-push-toright');
+            classie.toggle(menuLeft, 'cbp-spmenu-open');
+            disableOther('showLeftPush');
+
+            if ($("#myModal").css("display") == "none") {
+                $("#myModal").css("display", "block");
+            } else {
+                $("#myModal").css("display", "none");
+            }
+        };
+
+        function disableOther(button) {
+            if (button !== 'showLeftPush') {
+                classie.toggle(showLeftPush, 'disabled');
+            }
+        }
+
+        function modalConfirmacion(mensaje, titulo, botonConfirmar, hrefConfirmar, botonCancelar, hrefCancelar) {
+            bootbox.dialog({
+                message: mensaje,
+                title: titulo,
+                buttons: {
+                    success: {
+                        label: botonConfirmar,
+                        className: "btn-success",
+                        callback: function () {
+                            location.href = hrefConfirmar;
+                        }
+                    },
+                    danger: {
+                        label: botonCancelar,
+                        className: "btn-danger",
+                        callback: function () {
+                            window.location.href = hrefCancelar;
+                        }
+                    }
+                }
+            });
+        }
+
+        function modalConfirmacionCargaDocumental(mensaje, titulo, botonConfirmar, hrefConfirmar, botonCancelar, hrefCancelar) {
+            bootbox.dialog({
+                message: mensaje,
+                title: titulo,
+                buttons: {
+                    success: {
+                        label: botonConfirmar,
+                        className: "btn-login",
+                        callback: function () {
+                            location.href = hrefConfirmar;
+                        }
+                    },
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            var h = $("body")[0].offsetWidth;
+
+            if (h < 650) {
+                $("#Logo").removeAttr('src');
+                $("#Logo").attr('src', '../../Images/MpLogoGestorResponsive.png');
+            }
+        });
+    </script>
+
+    <% Html.Telerik().ScriptRegistrar()
+        .DefaultGroup(group => group
+            .Compress(false))
+        .Render(); %>
+</body>
+</html>

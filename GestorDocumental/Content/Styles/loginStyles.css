@@ -1,0 +1,37 @@
+﻿body 
+{
+  font-family  : Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	
+	color: #333333;
+	
+}
+
+
+#loginBox {
+
+    width:300px;
+    height:200px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-100px 0 0 -150px;
+   
+}
+
+#logoBox
+{
+	background-position: center;
+	background-image: url('../../Content/Images/logon_everis.png');
+	
+	background-repeat: no-repeat;
+	height: 80px;
+}
+#logoBox1
+{
+	background-position: center;
+	
+	background-image: url('../../Content/Images/logo_gas_natural.png');
+	background-repeat: no-repeat;
+	height: 80px;
+}

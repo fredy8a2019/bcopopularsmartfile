@@ -1,0 +1,28 @@
+﻿body
+{
+    background-color: #FFFFFF;
+    background-image: url(../Images/MpLogoGestor.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 20% 70%;
+    background-size: 75%;
+}
+
+.centrar
+{
+    position: absolute; /*nos posicionamos en el centro del navegador*/
+    top: 11%;
+    left: 83%; /*determinamos una anchura*/
+    width: 280px; /*indicamos que el margen izquierdo, es la mitad de la anchura*/
+    margin-left: -200px; /*indicamos que el margen superior, es la mitad de la altura*/
+    margin-top: -150;
+    border: 0px solid #808080;
+    padding: 12px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px #999;
+    
+    background: -webkit-linear-gradient(#ffffff,#ffffff,#BCD5F3, #205390); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ffffff,#ffffff,#BCD5F3, #205390); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ffffff,#ffffff,#BCD5F3, #205390); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ffffff,#ffffff,#BCD5F3, #205390); /* Standard syntax (must be last) */
+}

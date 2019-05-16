@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="GestorDocEnt">
+  <DataContextMoniker Name="/GestorDocEntDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f2653712-08e3-4c06-b236-a3307186b9ef" absoluteBounds="0.75, 0.5, 2, 5.6169254557291657">
+      <DataClassMoniker Name="/GestorDocEntDataContext/Campos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="558e59bc-0c33-411f-bfce-13186d7ed8ae" absoluteBounds="0.76499999999999968, 0.96, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.45923076923077 : 6.11692545572917); (1.45923076923077 : 6.36692545572917); (2.05461538461538 : 6.36692545572917); (2.05461538461538 : 6.11692545572917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GestorDocEntDataContext/Campos/Campos_Campos" />
+      <nodes>
+        <classShapeMoniker Id="f2653712-08e3-4c06-b236-a3307186b9ef" />
+        <classShapeMoniker Id="f2653712-08e3-4c06-b236-a3307186b9ef" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7fe0c3f2-37f5-44f1-a836-ca8be8ac3c2f" absoluteBounds="3.875, 3, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/GestorDocEntDataContext/P_Ciudad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cf5f727b-70ba-43df-8ae3-3db1f8547d0f" absoluteBounds="3.8899999999999997, 3.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b42ee836-40a2-493c-983d-a23e0a2d090f" absoluteBounds="3.875, 0.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/GestorDocEntDataContext/CodigosCampo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="954ae5a8-fa44-4e92-b2e7-3a69484e02cf" absoluteBounds="3.8899999999999997, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.57774983723958); (3.875 : 1.57774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GestorDocEntDataContext/Campos/Campos_CodigosCampo" />
+      <nodes>
+        <classShapeMoniker Id="f2653712-08e3-4c06-b236-a3307186b9ef" />
+        <classShapeMoniker Id="b42ee836-40a2-493c-983d-a23e0a2d090f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

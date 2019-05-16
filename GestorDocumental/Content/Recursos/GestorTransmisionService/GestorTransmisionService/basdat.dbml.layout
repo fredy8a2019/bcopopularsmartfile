@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="basdat">
+  <DataContextMoniker Name="/basdatDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b27daea5-69df-4f09-a8c9-65c89c9b7306" absoluteBounds="4.5, 0.75, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/basdatDataContext/Parametros" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ec6eb1e-1b6d-482a-a7ed-f16e6e5d7ab2" absoluteBounds="4.5150000000000006, 1.21, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c467096e-e2fa-4334-96b7-68d8097ff7a7" absoluteBounds="2, 2.25, 2, 2.9039737955729166">
+      <DataClassMoniker Name="/basdatDataContext/Transmision" />
+      <nestedChildShapes>
+        <elementListCompartment Id="03a69f89-93b5-452a-a4b0-dec6256aeab3" absoluteBounds="2.015, 2.71, 1.9700000000000002, 2.3439737955729165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c62e06a7-1eed-4887-9a6b-a77d2017a548" absoluteBounds="1, 0.625, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/basdatDataContext/Consecutivos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f337b5b4-deb5-403b-af17-8806b99d20cb" absoluteBounds="1.0150000000000001, 1.085, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

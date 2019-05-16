@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GestorDocumentalGNF_Pruebas" Class="BaseDatosDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=7.215.8.31;Initial Catalog=GestorDocumentalGNF_Pruebas;Persist Security Info=True;User ID=developer" SettingsObjectName="ServiceImpresionGNF.Properties.Settings" SettingsPropertyName="GestorDocumentalGNFConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Parametros" Member="Parametros">
+    <Type Name="Parametros">
+      <Column Name="id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="codigo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="valor" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CodigosBarras" Member="CodigosBarras">
+    <Type Name="CodigosBarras">
+      <Column Name="IdCodBarras" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdRadicacion" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CodigoZPL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="impresora" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="estado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FechaImpreso" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="usuario" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

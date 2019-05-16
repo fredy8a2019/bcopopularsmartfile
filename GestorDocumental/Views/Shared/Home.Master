@@ -1,0 +1,218 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head id="Head1" runat="server">
+    <meta name="viewport" content="width=device-width" />
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+    <script src="../../Content/Scripts/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <link href="../../Styles/BootsTrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/BootsTrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/BootsTrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/BootsTrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/BootsTrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    <script src="../../Styles/BootsTrap/js/bootstrap.js" type="text/javascript"></script>
+    <script src="../../Styles/BootsTrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="../../Content/Styles/page.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/Styles/Default.css" rel="stylesheet" type="text/css" />
+    <link rel="Shortcut Icon" href="../../Images/Icono.ico" />
+    <script src="../../Content/Scripts/jquery-impromptu.4.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        body {
+            font-family: Calibri !important;
+        }
+
+        #navigationMenu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navigationMenu img {
+            width: 40px;
+            margin-left: 5px;
+        }
+
+        #ulMenu {
+            margin-left: -12% !important;
+            margin-top: 6% !important;
+            margin-top: 5px;
+        }
+
+        .staticItem {
+            font-family: Calibri !important;
+            color: White;
+            font-weight: bold;
+            background-image: url(../../Images/IconosMenu/Boton.png) !important;
+            background-repeat: no-repeat;
+            background-position: right center;
+            padding-right: 14px;
+            width: 198px;
+            display: block;
+            height: 50px;
+        }
+
+            .staticItem:Hover {
+                font-family: Calibri !important;
+                color: Black;
+            }
+
+        .itemSelect {
+            font-family: Calibri !important;
+            background-color: #9AAE04;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            padding-top: 2px;
+            padding-bottom: 6px;
+            padding-left: 10px;
+            width: 110%;
+            cursor: pointer;
+            border-radius: 5px;
+            white-space: nowrap;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+            display: block;
+        }
+
+            .itemSelect:Hover {
+                font-family: Calibri !important;
+                color: Black;
+                background-color: #6785C1;
+                width: 130%;
+            }
+
+        .boxMenu {
+            font-family: Calibri !important;
+            border-radius: 5px;
+            width: 75%;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+            margin-left: 11%;
+        }
+
+        #navigationMenu {
+            float: left;
+        }
+
+            #NavigationMenu img {
+                border-style: none;
+                vertical-align: middle;
+                color: White;
+            }
+    </style>
+    <script src="../../Content/Scripts/Page/ajax.js" type="text/javascript"></script>
+    <script src="../../Content/Scripts/Page/_ui.js" type="text/javascript"></script>
+    <script>
+        (function () {
+            var _default = {
+
+                loagPage: function () {
+                },
+
+                init: function () {
+                    var usu = '<%=Session["USUARIO_LOGUEADO"]%>';
+                    transact.ajaxGET("/Menu/ObtenerPadresMvc1?Usuarios=" + usu, null, _default.success, _default.error);
+                },
+
+                success: function (data) {
+                    _ui.crearMenuMaster(data, $("#ulMenu"));
+                },
+
+                error: function (error) {
+                    console.log(error);
+                }
+            }
+
+            _default.init();
+            _default.loagPage();
+        })();
+    </script>
+    <meta name="description" content="The description of my page" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar-fixed-top" style="background-image: url(../../Images/Barra.fw.png); background-repeat: no-repeat; background-size: 100%; background-color: White; position: absolute; z-index: 1; height: 100px">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <div class="divTitulos" id="ContentTitulo">
+                        <asp:Label ID="lblTitulo" runat="server" ForeColor="Black" Font-Size="Large"></asp:Label>
+                    </div>
+                    <div class="divTitulos">
+                        <asp:Label ID="lblCliente" runat="server" Font-Size="Large" ForeColor="Black"></asp:Label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="div">
+            <span id="separacion"></span>
+            <asp:LinkButton ID="btnSalir" runat="server" CausesValidation="False" PostBackUrl="/Seguridad/Logout"
+                Font-Size="Large" ClientIDMode="Static">Cerrar sesión</asp:LinkButton>
+        </div>
+        <div class="div">
+            <label id="lblNombreUsuario">
+                <%=((GestorDocumental.Models.Clientes)Session["CLIENTE"]).CliNombre%>
+            :
+            <%=Session["NombreUsuario"]%>
+            :
+            <%=Session["TotalCapturas"]%></label>
+        </div>
+        <hr id="divisionHr" />
+    </form>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3">
+
+                <!-- Para cambiar el estilo del menu se debe quitar el div que tiene la clase span3 
+                    y comentariar el boton de la etiqueta a--->
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <br />
+                <div>
+                    <div id="sidr">
+                        <div id="navigationMenu" class="boxMenu">
+                            <ul id="ulMenu">
+                                <li id="liPadre000" data-rol="menuPadre">
+                                    <a class="staticItem" href="/Home/Index" id="link000">
+                                        <img src="../../../Images/IconosMenu/Home.png">Inicio</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Si se usa el estilo del nuevo Menu este debe estar habilitado -->
+                    <%--<script>
+                        $(document).ready(function () {
+                            $("#simple-menu").sidr();
+                        });
+                    </script>--%>
+                </div>
+            </div>
+        </div>
+        <%--<!-- Este debe ir habilitado cuando se utilice el nuevo menu -->
+        <div>
+            <div class="hero-unit">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>--%>
+        <div class="span10">
+            <div class="hero-unit">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <br />
+    </div>
+    <br />
+    <br />
+    <footer>
+        <center><h5>© Copyright <%= DateTime.Now.Year %> everis group</h5></center>
+    </footer>
+</body>
+</html>

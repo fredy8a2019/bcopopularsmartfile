@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorTransmisionService", "GestorTransmisionService\GestorTransmisionService.csproj", "{BEF54653-9DB0-418E-B8E1-AEBE2A5B7ABF}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupGestorTransmision", "SetupGestorTransmision\SetupGestorTransmision.vdproj", "{A3BA4878-61BE-463D-BA08-99B8FE2329B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{E68E9008-A67B-469E-B0C2-D11ABE76D84F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEF54653-9DB0-418E-B8E1-AEBE2A5B7ABF}.Debug|x86.ActiveCfg = Debug|x86
+		{BEF54653-9DB0-418E-B8E1-AEBE2A5B7ABF}.Debug|x86.Build.0 = Debug|x86
+		{BEF54653-9DB0-418E-B8E1-AEBE2A5B7ABF}.Release|x86.ActiveCfg = Release|x86
+		{BEF54653-9DB0-418E-B8E1-AEBE2A5B7ABF}.Release|x86.Build.0 = Release|x86
+		{A3BA4878-61BE-463D-BA08-99B8FE2329B8}.Debug|x86.ActiveCfg = Debug
+		{A3BA4878-61BE-463D-BA08-99B8FE2329B8}.Release|x86.ActiveCfg = Release
+		{E68E9008-A67B-469E-B0C2-D11ABE76D84F}.Debug|x86.ActiveCfg = Debug|x86
+		{E68E9008-A67B-469E-B0C2-D11ABE76D84F}.Debug|x86.Build.0 = Debug|x86
+		{E68E9008-A67B-469E-B0C2-D11ABE76D84F}.Release|x86.ActiveCfg = Release|x86
+		{E68E9008-A67B-469E-B0C2-D11ABE76D84F}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

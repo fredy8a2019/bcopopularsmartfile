@@ -1,0 +1,197 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="GestorDocumental.Site1" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <script src="../Content/Scripts/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <link href="../Styles/BootsTrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/BootsTrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/BootsTrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/BootsTrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/BootsTrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    <script src="../Styles/BootsTrap/js/bootstrap.js" type="text/javascript"></script>
+    <script src="../Styles/BootsTrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="../Content/Styles/page.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/Styles/Default.css" rel="stylesheet" type="text/css" />
+    <link rel="Shortcut Icon" href="../Images/Icono.ico" />
+    <script src="../Content/Scripts/jquery-impromptu.4.0.min.js" type="text/javascript"
+        charset="utf-8"></script>
+    <script type="text/javascript">
+
+        //scripts para bloqueo de la interfaz  cuando se produce un request
+        $().ready(
+
+            function () {
+                Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(onRequestStart)
+                Sys.WebForms.PageRequestManager.getInstance().add_endRequest(onRequestEnd)
+            });
+        $(document).ready(function () {
+            $("ul.level2.dynamic").attr("style", "display: none; top: 0px; left: 100%;");
+        });
+
+        function onRequestStart() {
+            // tiffobj0.style.display = 'none';
+            $.blockUI();
+        }
+
+        function onRequestEnd() {
+            $.unblockUI();
+
+        }
+
+        function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+
+    </script>
+    <style type="text/css">
+        body
+        {
+            font-family: Calibri !important;
+        }
+        
+        #NavigationMenu ul
+        {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            border:none;
+        }
+        
+        #NavigationMenu img
+        {
+            width: 40px;
+            margin-left: 5px;
+        }
+        
+        #NavigationMenu ul[role="menu"]
+        {
+            margin-left: -12% !important;
+            margin-top: 6% !important;
+            margin-top: 5px;
+        }
+        
+        .staticItem
+        {
+            font-family: Calibri !important;
+            color: White;
+            font-weight: bold;
+            background-image: url(../Images/IconosMenu/Boton.png) !important;
+            width: 198px;
+            height: 50px;
+            border:none;
+        }
+        
+        .staticItem:Hover
+        {
+            font-family: Calibri !important;
+            color: Black;
+        }
+        
+        .itemSelect
+        {
+            font-family: Calibri !important;
+            background-color: #9AAE04;
+            color: white;
+            font-size: 14px;
+            font-family: "Arial";
+            font-weight: bold;
+            padding-top: 2px;
+            padding-bottom: 6px;
+            padding-left: 10px;
+            width: 110%;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+        }
+        
+        
+        .itemSelect:Hover
+        {
+            font-family: Calibri !important;
+            color: Black;
+            background-color: #6785C1;
+            width: 130%;
+        }
+        
+        .boxMenu
+        {
+            font-family: Calibri !important;
+            border-radius: 5px;
+            width: 75%;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+            margin-left: 11%;
+        }
+        
+        div
+        {
+            font-family: Calibri !important;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="navbar-fixed-top" style="background-image: url(../Images/Barra.fw.png);
+        background-repeat: no-repeat; background-size: 100%; background-color: White; position:absolute; z-index:1;
+        height: 100px">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <div class="divTitulos" id="ContentTitulo">
+                    <asp:Label ID="lblTitulo" runat="server" Font-Size="Large" ForeColor="Black"></asp:Label>
+                </div>
+                <div class="divTitulos">
+                    <asp:Label ID="lblCliente" runat="server" Font-Size="Large" ForeColor="Black"></asp:Label>
+                </div>
+                <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" AsyncPostBackTimeout="7200">
+                    <Scripts>
+                        <asp:ScriptReference Path="../Content/Scripts/jquery.blockUI.js" />
+                    </Scripts>
+                </asp:ToolkitScriptManager>
+            </div>
+        </div>
+    </div>
+    <div class="div">
+        <span id="separacion"></span>
+        <asp:LinkButton ID="btnSalir" runat="server" Font-Size="Large" CausesValidation="False"
+            OnClick="btnSalir_Click">Cerrar sesión</asp:LinkButton>
+    </div>
+    <div class="div">
+        <label id="lblNombreUsuario">
+            <%=((GestorDocumental.Models.Clientes)Session["CLIENTE"]).CliNombre%>
+            :
+            <%=Session["NombreUsuario"]%>
+            :
+            <%=Session["TotalCapturas"]%></label>
+    </div>
+    <hr id="divisionHr" />
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <br />
+                <div class="boxMenu">
+                    <asp:Menu ID="NavigationMenu" runat="server" Orientation="Vertical" EnableViewState="False"
+                        StaticSubMenuIndent="16px">
+                        <StaticMenuItemStyle CssClass="staticItem" />
+                        <DynamicMenuItemStyle CssClass="itemSelect" />
+                    </asp:Menu>
+                </div>
+            </div>
+        </div>
+        <div class="span9">
+            <div class="hero-unit">
+                <asp:Label ID="lblNegocio" runat="server" Font-Size="Large" ForeColor="Black"></asp:Label>
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <br />
+    </div>
+    </form>
+</body>
+</html>

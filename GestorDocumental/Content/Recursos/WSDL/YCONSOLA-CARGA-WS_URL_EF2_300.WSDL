@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn:sap-com:document:sap:rfc:functions" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<wsdl:documentation>
+		<sidl:sidl xmlns:sidl="http://www.sap.com/2007/03/sidl"/>
+	</wsdl:documentation>
+	<wsp:UsingPolicy wsdl:required="true"/>
+	<wsp:Policy wsu:Id="BN_BN_YCONSOLA_CARGA_WS_BINDING">
+		<saptrnbnd:OptimizedXMLTransfer uri="http://xml.sap.com/2006/11/esi/esp/binxml" xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/" wsp:Optional="true"/>
+		<saptrnbnd:OptimizedMimeSerialization xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" wsp:Optional="true"/>
+		<wsp:ExactlyOne xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+		<wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true"/>
+	</wsp:Policy>
+	<wsp:Policy wsu:Id="BN_BN_YCONSOLA_CARGA_WS_BINDING_SOAP12">
+		<saptrnbnd:OptimizedXMLTransfer uri="http://xml.sap.com/2006/11/esi/esp/binxml" xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/" wsp:Optional="true"/>
+		<saptrnbnd:OptimizedMimeSerialization xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" wsp:Optional="true"/>
+		<wsp:ExactlyOne xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+		<wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true"/>
+	</wsp:Policy>
+	<wsp:Policy wsu:Id="IF_IF_YCONSOLA_CARGA_WS">
+		<sapsession:Session xmlns:sapsession="http://www.sap.com/webas/630/soap/features/session/">
+			<sapsession:enableSession>false</sapsession:enableSession>
+		</sapsession:Session>
+		<sapcentraladmin:CentralAdministration xmlns:sapcentraladmin="http://www.sap.com/webas/700/soap/features/CentralAdministration/" wsp:Optional="true">
+			<sapcentraladmin:BusinessApplicationID>D4AE528E89C81EE396E7708916F7CE71</sapcentraladmin:BusinessApplicationID>
+		</sapcentraladmin:CentralAdministration>
+	</wsp:Policy>
+	<wsp:Policy wsu:Id="OP_IF_OP_YCONSOLA_CARGA_WS">
+		<sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+		<sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+		<saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+		<saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+	</wsp:Policy>
+	<wsdl:types>
+		<xsd:schema attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:rfc:functions">
+			<xsd:simpleType name="char1">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="1"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char10">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="10"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char13">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="13"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char16">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="16"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char3">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="3"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char5">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="5"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char50">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="50"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char70">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="70"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char8">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="8"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="curr13.2">
+				<xsd:restriction base="xsd:decimal">
+					<xsd:totalDigits value="13"/>
+					<xsd:fractionDigits value="2"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="curr15.2">
+				<xsd:restriction base="xsd:decimal">
+					<xsd:totalDigits value="15"/>
+					<xsd:fractionDigits value="2"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="date10">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="10"/>
+					<xsd:pattern value="\d\d\d\d-\d\d-\d\d"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="decimal5.2">
+				<xsd:restriction base="xsd:decimal">
+					<xsd:totalDigits value="5"/>
+					<xsd:fractionDigits value="2"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="numeric8">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="8"/>
+					<xsd:pattern value="\d*"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="quantum13.3">
+				<xsd:restriction base="xsd:decimal">
+					<xsd:totalDigits value="13"/>
+					<xsd:fractionDigits value="3"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:complexType name="YCONSOLA_WS_ST_IMPUESTOS">
+				<xsd:sequence>
+					<xsd:element name="VAT_BASE_AMOUNT" type="tns:curr15.2"/>
+					<xsd:element name="VAT_PERCENTAGE" type="tns:decimal5.2"/>
+					<xsd:element name="VAT_TAX_AMOUNT" type="tns:curr15.2"/>
+					<xsd:element name="VAT_TAX_ID" type="tns:char3"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="YCONSOLA_WS_ST_POSICIONES">
+				<xsd:sequence>
+					<xsd:element name="DELIVERY_NOTE" type="tns:char16"/>
+					<xsd:element name="DELIVERY_DATE" type="tns:date10"/>
+					<xsd:element name="ITEM_TEXT" type="tns:char50"/>
+					<xsd:element name="ITEM_QUANTITY" type="tns:quantum13.3"/>
+					<xsd:element name="ITEM_PRICE" type="tns:curr13.2"/>
+					<xsd:element name="ITEM_AMOUNT" type="tns:curr13.2"/>
+					<xsd:element name="ITEM_PERCENTAGE" type="tns:decimal5.2"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="YCONSOLA_WS_CABECERA">
+				<xsd:sequence>
+					<xsd:element name="FACT_ID" type="tns:char16"/>
+					<xsd:element name="DOC_TYPE" type="tns:char8"/>
+					<xsd:element name="DOC_NUMBER" type="tns:char16"/>
+					<xsd:element name="DOC_DATE" type="tns:date10"/>
+					<xsd:element name="VENDOR_RFC" type="tns:char13"/>
+					<xsd:element name="COMPANY_RFC" type="tns:char13"/>
+					<xsd:element name="TOTAL_AMOUNT" type="tns:curr13.2"/>
+					<xsd:element name="CURRENCY_CODE" type="tns:char3"/>
+					<xsd:element name="EMPLOYEE_NUMBER" type="tns:numeric8"/>
+					<xsd:element name="PURCHASE_ORDER" type="tns:char10"/>
+					<xsd:element name="DISCOUNT_AMOUNT" type="tns:curr13.2"/>
+					<xsd:element name="WITHOLDING_TAX" type="tns:curr15.2"/>
+					<xsd:element name="ADVANCE_FLAG" type="tns:char1"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="YCONSOLA_WS_ST_RESULTADO">
+				<xsd:sequence>
+					<xsd:element name="OK_CODE" type="tns:char3"/>
+					<xsd:element name="DESCRIPCION" type="tns:char70"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="YCONSOLA_WS_IMPUESTOS">
+				<xsd:sequence>
+					<xsd:element name="item" type="tns:YCONSOLA_WS_ST_IMPUESTOS" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="YCONSOLA_WS_POSICIONES">
+				<xsd:sequence>
+					<xsd:element name="item" type="tns:YCONSOLA_WS_ST_POSICIONES" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="YCONSOLA_WS_TBL_RESULTADO">
+				<xsd:sequence>
+					<xsd:element name="item" type="tns:YCONSOLA_WS_ST_RESULTADO" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="YCONSOLA_CARGA_WS">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="ACCION" type="tns:char8"/>
+						<xsd:element name="FACTURA_CABECERA" type="tns:YCONSOLA_WS_CABECERA"/>
+						<xsd:element name="FACTURA_IMPUESTOS" type="tns:YCONSOLA_WS_IMPUESTOS"/>
+						<xsd:element name="FACTURA_PDF_BASE64" type="xsd:base64Binary"/>
+						<xsd:element name="FACTURA_POSICIONES" type="tns:YCONSOLA_WS_POSICIONES"/>
+						<xsd:element name="LAND1" type="tns:char3"/>
+						<xsd:element name="ORIGEN" type="tns:char5"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="YCONSOLA_CARGA_WSResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="IT_RESULTADO" type="tns:YCONSOLA_WS_TBL_RESULTADO"/>
+						<xsd:element name="RCODE" type="xsd:int"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="YCONSOLA_CARGA_WS">
+		<wsdl:part name="parameters" element="tns:YCONSOLA_CARGA_WS"/>
+	</wsdl:message>
+	<wsdl:message name="YCONSOLA_CARGA_WSResponse">
+		<wsdl:part name="parameter" element="tns:YCONSOLA_CARGA_WSResponse"/>
+	</wsdl:message>
+	<wsdl:portType name="YCONSOLA_CARGA_WS">
+		<wsdl:documentation>
+			<sapdoc:sapdoc xmlns:sapdoc="urn:sap:esi:documentation">
+				<sapdoc:docitem applicationComponent="SD"/>
+			</sapdoc:sapdoc>
+		</wsdl:documentation>
+		<wsp:Policy>
+			<wsp:PolicyReference URI="#IF_IF_YCONSOLA_CARGA_WS"/>
+		</wsp:Policy>
+		<wsdl:operation name="YCONSOLA_CARGA_WS">
+			<wsp:Policy>
+				<wsp:PolicyReference URI="#OP_IF_OP_YCONSOLA_CARGA_WS"/>
+			</wsp:Policy>
+			<wsdl:input message="tns:YCONSOLA_CARGA_WS"/>
+			<wsdl:output message="tns:YCONSOLA_CARGA_WSResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="YCONSOLA_CARGA_WS_BINDING" type="tns:YCONSOLA_CARGA_WS">
+		<wsp:Policy>
+			<wsp:PolicyReference URI="#BN_BN_YCONSOLA_CARGA_WS_BINDING"/>
+		</wsp:Policy>
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+		<wsdl:operation name="YCONSOLA_CARGA_WS">
+			<soap:operation soapAction="urn:sap-com:document:sap:rfc:functions:YCONSOLA_CARGA_WS:YCONSOLA_CARGA_WSRequest" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="YCONSOLA_CARGA_WS_BINDING_SOAP12" type="tns:YCONSOLA_CARGA_WS">
+		<wsp:Policy>
+			<wsp:PolicyReference URI="#BN_BN_YCONSOLA_CARGA_WS_BINDING_SOAP12"/>
+		</wsp:Policy>
+		<wsoap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+		<wsdl:operation name="YCONSOLA_CARGA_WS">
+			<wsoap12:operation soapAction="urn:sap-com:document:sap:rfc:functions:YCONSOLA_CARGA_WS:YCONSOLA_CARGA_WSRequest" style="document"/>
+			<wsdl:input>
+				<wsoap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<wsoap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="YCONSOLA_CARGA_WS">
+		<wsdl:port name="YCONSOLA_CARGA_WS_BINDING" binding="tns:YCONSOLA_CARGA_WS_BINDING">
+			<soap:address location="http://172.17.235.174:8080/eco/webservices/yconsola_carga_ws"/>
+		</wsdl:port>
+		<wsdl:port name="YCONSOLA_CARGA_WS_BINDING_SOAP12" binding="tns:YCONSOLA_CARGA_WS_BINDING_SOAP12">
+			<wsoap12:address location="http://172.17.235.174:8080/eco/webservices/yconsola_carga_ws"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

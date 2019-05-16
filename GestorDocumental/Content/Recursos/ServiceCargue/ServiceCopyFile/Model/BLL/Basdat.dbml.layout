@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Basdat">
+  <DataContextMoniker Name="/BasdatDataContext" />
+  <nestedChildShapes>
+    <classShape Id="364dc797-d61c-4c41-b29e-9c094bdc0ba0" absoluteBounds="1, 1, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/BasdatDataContext/Parametros" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3faaf67b-8985-4d27-a40d-02e6e72b99fe" absoluteBounds="1.0150000000000001, 1.46, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5679da20-4092-4cdd-b068-43416335c29e" absoluteBounds="3.5, 1.375, 2, 2.5752791341145831">
+      <DataClassMoniker Name="/BasdatDataContext/Recepcion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b41d8cb-bef2-43aa-b656-6bf578c3f6db" absoluteBounds="3.515, 1.835, 1.9700000000000002, 2.015279134114583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

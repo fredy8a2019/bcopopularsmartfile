@@ -1,0 +1,18 @@
+﻿#MainContent_pControls table .custom-combobox {
+    position: relative;
+    display: inline-block;
+    font-size:90%!important;
+}
+
+#MainContent_pControls table .custom-combobox-toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;   
+}
+
+#MainContent_pControls table .custom-combobox-input {
+   margin: 0;
+   padding: 0.3em;
+   }

@@ -1,0 +1,107 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    outline: 0;
+}
+
+html, body {
+    width: 100%;
+}
+
+body {
+    background: #366;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#menu {
+    font-size: 0.9em;
+    margin: 5px;
+    position: relative;
+}
+
+    #menu ul {
+        list-style-type: none;
+    }
+
+        #menu ul li a.nivel1, #menu ul li a.nivel1ie {
+            width: 130px;
+        }
+
+        #menu ul li a.primera {
+            border-top: solid 1px #fff;
+        }
+
+        /*#menu ul li a {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            background-color: #9aad04;
+            border: solid 1px #fff;
+            border-top: none;
+            padding: 5px;
+            position: relative;
+            text-align: center;
+            border-radius:8px;
+        }*/
+
+        #menu ul li:hover {
+            position: relative;
+            color: #000;
+        }
+
+            /*#menu ul li a:hover, #menu ul li:hover a.nivel1 {
+                background-color: #6785c1;
+                color: #000;
+                position: relative;
+            }*/
+
+        #menu ul li a.nivel1 {
+            display: block !important;
+            display: none;
+            position: relative;
+        }
+
+        #menu ul li ul {
+            display: none;
+        }
+
+        #menu ul li a:hover ul, #menu ul li:hover ul {
+            display: block;
+            position: absolute;
+            top: -1px !important;
+            top: -22px;
+            left: 130px !important;
+            left: 100px;
+            width: 850px;
+        }
+
+            #menu ul li a:hover ul#primero, #menu ul li:hover ul#primero {
+                top: 0px !important;
+                top: -22px;
+            }
+
+        #menu ul li ul li {
+            display: inline;
+        }
+
+            #menu ul li ul li a {
+                width: 100px;
+                float: left;
+                background-color: #6785c1;
+                color: #000;
+                margin-left: -2px;
+                border-top: solid 1px #fff;
+            }
+
+                #menu ul li ul li a:hover {
+                    position: relative;
+                    background-color: #399;
+                    color: #FFF;
+                }
+
+table.falsa {
+    border-collapse: collapse;
+    border: 0px;
+    float: left;
+    position: relative;
+}

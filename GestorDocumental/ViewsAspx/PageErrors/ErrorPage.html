@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Error 404</title>
+    <script src="../../Content/Scripts/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <link href="../../Styles/BootsTrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/BootsTrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/BootsTrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/BootsTrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/BootsTrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/2013.1.219/telerik.common.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/2013.1.219/telerik.simple.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/2013.1.219/telerik.rtl.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/Styles/Default.css" rel="stylesheet" type="text/css" />
+    <link rel="Shortcut Icon" href="../../Images/Icono.ico" />
+    <link href="../../Content/Styles/impromptu.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="../../Content/Scripts/jquery-impromptu.4.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        .centrarImagen {
+            position: absolute;
+            top: 7%;
+            left: 3%;
+        }
+
+        .centrarError {
+            position: absolute;
+            top: 20%;
+            left: 60%;
+            opacity: 0.6;
+            filter: alpha(opacity=40); /* For IE8 and earlier */
+        }
+
+        .mensajeError {
+            position: absolute;
+            top: 20%;
+            left: 23%;
+        }
+
+        .Imagen {
+            background-size: 50%;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar-fixed-top" style="background-image: url(../../Images/Barra.fw.png); background-repeat: no-repeat; background-size: 100%; background-color: White; position: absolute; z-index: 1; height: 100px"></div>
+        <div class="span5 mensajeError">
+            <h1>Error en la pagina solicitada.</h1>
+            <a class="btn" href="../../Home/Index">Volver a Inicio</a>
+        </div>
+        <div class="span5 centrarError">
+            <img alt="" class="Imagen" src="../../Images/ErrorPage.png" />
+        </div>
+    </form>
+</body>
+</html>

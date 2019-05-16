@@ -1,0 +1,78 @@
+﻿*.clear
+{
+    clear: both;
+    opacity: 0;
+    background-color: none;
+    color: none;
+    height: 0px;
+}
+
+.span
+{
+    border: 0.5px solid black;
+    padding: 3px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.displayNone
+{
+    display: none;
+}
+
+#contentLeft, #contentRigth
+{
+    width: 30%;
+    float: left;
+}
+
+#infoConfirmacion, #infoBusqueda
+{
+    width: 50%;
+    float: left;
+}
+
+#infoBusqueda
+{
+    height: 200px;
+}
+
+label
+{
+    margin-top: 5px;
+    margin-bottom: 5px;   
+    font-size: 1em;
+    color:Black;
+}
+
+
+textarea
+{
+    width: 98%;
+    height: 100px;
+}
+
+legend
+{
+    font-size: 1em;
+    font-family: inherit;
+    letter-spacing: 0.2ex;
+}
+
+.error
+{
+    color: Red;
+}
+
+
+#btnReasignar, #btnGuardar
+{
+    float:left;
+}
+
+select 
+{
+    border: solid 1px #999 !important;
+    margin-bottom: 5px !important;
+}

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GestorDocumental" Class="basdatDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=7.215.101.91;Initial Catalog=GestorDocumental;Persist Security Info=True;User ID=sa;Connect Timeout=0" SettingsObjectName="GestorTransmisionService.Properties.Settings" SettingsPropertyName="GestorDocumentalConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Parametros" Member="Parametros">
+    <Type Name="Parametros">
+      <Column Name="id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="codigo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="valor" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Transmision" Member="Transmision">
+    <Type Name="Transmision">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="storeProcedure" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="delimitador" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="nomArchivo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="extArchivo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="rutaArchivo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="hora" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tipo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="procesado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="fecProceso" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="activo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="orden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Consecutivos" Member="Consecutivos">
+    <Type Name="Consecutivos">
+      <Column Name="ConId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ConDescripcion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ConCodigo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ConValor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

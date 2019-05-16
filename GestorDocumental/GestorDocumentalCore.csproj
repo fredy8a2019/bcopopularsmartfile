@@ -1,0 +1,1998 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{747F14A6-A308-40E2-AE15-7FC9327399D1}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GestorDocumental</RootNamespace>
+    <AssemblyName>GestorDocumental</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CodigoBarras">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\CodigoBarras.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v11.2.Core">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.Charts.v11.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v11.2">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.Data.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Design.v11.2">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.Design.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v11.2.Core">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.PivotGrid.v11.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.2.Core">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.Printing.v11.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v11.2.Core">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.RichEdit.v11.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.SpellChecker.v11.2.Core">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.SpellChecker.v11.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.2">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.Utils.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxEditors.v11.2">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.Web.ASPxEditors.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGridView.v11.2">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.Web.ASPxGridView.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v11.2">
+      <HintPath>..\..\..\GestorDocumentalCencosud\GestorDocumental\bin\DevExpress.Web.ASPxHtmlEditor.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v11.2">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.Web.ASPxPivotGrid.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v11.2.Export">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.Web.ASPxPivotGrid.v11.2.Export.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v11.2">
+      <HintPath>..\..\..\GestorDocumentalCencosud\GestorDocumental\bin\DevExpress.Web.ASPxSpellChecker.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v11.2">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.Web.ASPxThemes.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.Mvc.v11.2">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.Web.Mvc.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v11.2">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.Web.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v11.2">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.XtraBars.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v11.2.Design">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.XtraBars.v11.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.2">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.XtraCharts.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.2.Web">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.XtraCharts.v11.2.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.2">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.XtraEditors.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.2.Design">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.XtraEditors.v11.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v11.2">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.XtraNavBar.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v11.2">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.XtraPivotGrid.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v11.2.Design">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.XtraPivotGrid.v11.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v11.2">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.XtraPrinting.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v11.2.Design">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.XtraPrinting.v11.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.2">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.XtraReports.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.2.Web">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.XtraReports.v11.2.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v11.2">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\DevExpress.XtraTreeList.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="GestorDocumental, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GestorDocumental.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.5.9\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="RasterEdge.Imaging.Basic, Version=9.8.7.60412, Culture=neutral, PublicKeyToken=b638ab5dea8d8105, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RasterEdge.Imaging.Basic.dll</HintPath>
+    </Reference>
+    <Reference Include="RasterEdge.Imaging.Basic.Codec, Version=9.8.7.60412, Culture=neutral, PublicKeyToken=b638ab5dea8d8105, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RasterEdge.Imaging.Basic.Codec.dll</HintPath>
+    </Reference>
+    <Reference Include="RasterEdge.Imaging.Drawing, Version=9.8.7.60412, Culture=neutral, PublicKeyToken=b638ab5dea8d8105, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RasterEdge.Imaging.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="RasterEdge.Imaging.Font, Version=9.8.6.60330, Culture=neutral, PublicKeyToken=b638ab5dea8d8105, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RasterEdge.Imaging.Font.dll</HintPath>
+    </Reference>
+    <Reference Include="RasterEdge.Imaging.Processing, Version=9.8.7.60412, Culture=neutral, PublicKeyToken=b638ab5dea8d8105, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RasterEdge.Imaging.Processing.dll</HintPath>
+    </Reference>
+    <Reference Include="RasterEdge.XDoc.PDF, Version=9.8.7.60412, Culture=neutral, PublicKeyToken=b638ab5dea8d8105, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RasterEdge.XDoc.PDF.dll</HintPath>
+    </Reference>
+    <Reference Include="SautinSoft.PdfFocus">
+      <HintPath>..\..\..\Users\ccaycedo\Documents\pdf_focus_net_full\PDF Focus .Net Full (4.0.1.28)\Bin\Net 4.0\SautinSoft.PdfFocus.dll</HintPath>
+    </Reference>
+    <Reference Include="SautinSoft.PdfVision">
+      <HintPath>..\..\..\Users\ccaycedo\Documents\pdf_vision_net_full\PDF Vision .Net Full (4.5.12.5)\Bin\Net 4.0\SautinSoft.PdfVision.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpZebra">
+      <HintPath>I:\SharpZebra.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\ccaycedo\Documents\BinMVC\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\ccaycedo\Documents\BinMVC\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\ccaycedo\Documents\BinMVC\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\ccaycedo\Documents\BinMVC\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\ccaycedo\Documents\BinMVC\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\ccaycedo\Documents\BinMVC\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.Mvc">
+      <HintPath>I:\GestorDocumental\GestorDocumentalGNF\GestorDocumental\bin\Telerik.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\EditorLocalization.bg-BG.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.bg-BG.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.da-DK.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.da-DK.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.de-DE.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.de-DE.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.en-US.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.fr-FR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.nl-NL.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.nl-NL.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.pl-PL.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.pl-PL.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.pt-BR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.pt-BR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.pt-PT.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.pt-PT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.ru-RU.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.ru-RU.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.uk-UA.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.uk-UA.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.zh-CN.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.zh-CN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.bg-BG.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.bg-BG.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.da-DK.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.da-DK.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.de-DE.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.de-DE.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.en-US.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.es-ES.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.es-ES.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.fr-FR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.nl-NL.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.nl-NL.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.pl-PL.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.pl-PL.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.pt-BR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.pt-BR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.pt-PT.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.pt-PT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.ru-RU.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.ru-RU.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.uk-UA.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.uk-UA.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.zh-CN.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.zh-CN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.bg-BG.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.bg-BG.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.da-DK.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.da-DK.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.en-US.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.fr-FR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.nl-NL.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.nl-NL.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.pl-PL.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.pl-PL.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.pt-BR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.pt-BR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.pt-PT.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.pt-PT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.ru-RU.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.ru-RU.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.zh-CN.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.zh-CN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AlmacenarController.cs" />
+    <Compile Include="Controllers\ArchivoController.cs" />
+    <Compile Include="Controllers\AsignacionesController.cs" />
+    <Compile Include="Controllers\CamposController.cs" />
+    <Compile Include="Controllers\CapturaController.cs" />
+    <Compile Include="Controllers\CapturaInformacionController.cs" />
+    <Compile Include="Controllers\CargueController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\ConsolaController.cs" />
+    <Compile Include="Controllers\ContabilizacionMasivaController.cs" />
+    <Compile Include="Controllers\ContabilizarController.cs" />
+    <Compile Include="Controllers\ControlUsuarios.cs" />
+    <Compile Include="Controllers\CrearArchivoController.cs" />
+    <Compile Include="Controllers\CrearFormulariosCaptura.cs" />
+    <Compile Include="Controllers\CrearXML.cs" />
+    <Compile Include="Controllers\CruceIdentidadController.cs" />
+    <Compile Include="Controllers\Dactiloscopia2Controller.cs" />
+    <Compile Include="Controllers\DactiloscopiaController.cs" />
+    <Compile Include="Controllers\DevolucionEtapaController.cs" />
+    <Compile Include="Controllers\DocumentosController.cs" />
+    <Compile Include="Controllers\EdicionIncidentesCapturaController.cs" />
+    <Compile Include="Controllers\EnvioBackController.cs" />
+    <Compile Include="Controllers\EnvioCustodioController.cs" />
+    <Compile Include="Controllers\EnvioFrontController.cs" />
+    <Compile Include="Controllers\FinDestruccionController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IndexacionConfController.cs" />
+    <Compile Include="Controllers\IndexacionImgController.cs" />
+    <Compile Include="Controllers\IniDestruccionController.cs" />
+    <Compile Include="Controllers\ListasController.cs" />
+    <Compile Include="Controllers\LoteoController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\MesaController.cs" />
+    <Compile Include="Controllers\MobDatosController.cs" />
+    <Compile Include="Controllers\MobGrillaDatosController.cs" />
+    <Compile Include="Controllers\MobileController.cs.cs" />
+    <Compile Include="Controllers\ModificarController.cs" />
+    <Compile Include="Controllers\ParametrosController.cs" />
+    <Compile Include="Controllers\ParametrosGeneralesController.cs" />
+    <Compile Include="Controllers\PerfilesController.cs" />
+    <Compile Include="Controllers\PriorizacionController.cs" />
+    <Compile Include="Controllers\RadicacionController.cs" />
+    <Compile Include="Controllers\RecepcionController.cs" />
+    <Compile Include="Controllers\ReferenciacionController.cs" />
+    <Compile Include="Controllers\ReIndexacionImgController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
+    <Compile Include="Controllers\ReporteCausalesAutoController.cs" />
+    <Compile Include="Controllers\ReporteDocumentosCargadosController.cs" />
+    <Compile Include="Controllers\ReportesController.cs" />
+    <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\SeguridadController.cs" />
+    <Compile Include="Controllers\ServicioCargueController.cs" />
+    <Compile Include="Controllers\SolicitudBackController.cs" />
+    <Compile Include="Controllers\SolicitudController.cs" />
+    <Compile Include="Controllers\SuspenderController.cs" />
+    <Compile Include="Controllers\TransmicionXMLController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
+    <Compile Include="Controllers\ValidacionDocExitosaController.cs" />
+    <Compile Include="Controllers\ValidacionesController.cs" />
+    <Compile Include="Controllers\Val_DocumentalController.cs" />
+    <Compile Include="Controllers\WebService.cs" />
+    <Compile Include="Controllers\WebServiceController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AsignacionTareasModel.cs" />
+    <Compile Include="Models\AuditoriaModel.cs" />
+    <Compile Include="Models\CapturaModel.cs" />
+    <Compile Include="Models\CapturaRadicacionModel.cs" />
+    <Compile Include="Models\CargueLotesModel.cs" />
+    <Compile Include="Models\CodigosBarrasModel.cs" />
+    <Compile Include="Models\ConciliacionModel.cs" />
+    <Compile Include="Models\ConsecutivosModel.cs" />
+    <Compile Include="Models\DatosReferenciacionModelo.cs" />
+    <Compile Include="Models\Extends.cs" />
+    <Compile Include="Models\GestorDocuModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestorDocuModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LogRepository.cs" />
+    <Compile Include="Models\LogUsuarios.cs" />
+    <Compile Include="Models\LoteoCambiosModel.cs" />
+    <Compile Include="Models\LoteoImagenModel.cs" />
+    <Compile Include="Models\MobileModel.cs" />
+    <Compile Include="Models\ModificarModel.cs" />
+    <Compile Include="Models\RadicacionModelo.cs" />
+    <Compile Include="Models\RecepcionModel.cs" />
+    <Compile Include="Models\ReportModel.cs" />
+    <Compile Include="Models\SessionRepository.cs" />
+    <Compile Include="Models\UnidadDocumentalModel.cs" />
+    <Compile Include="Models\UsuariosModel.cs" />
+    <Compile Include="Models\Verif_DataModelo.cs" />
+    <Compile Include="Models\WebServiceModel.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="ViewsAspx\Conciliar.aspx.cs">
+      <DependentUpon>Conciliar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewsAspx\Conciliar.aspx.designer.cs">
+      <DependentUpon>Conciliar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsAspx\ReporteContabilizacion.aspx.cs">
+      <DependentUpon>ReporteContabilizacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewsAspx\ReporteContabilizacion.aspx.designer.cs">
+      <DependentUpon>ReporteContabilizacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsAspx\ReporteRadicacion.aspx.cs">
+      <DependentUpon>ReporteRadicacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewsAspx\ReporteRadicacion.aspx.designer.cs">
+      <DependentUpon>ReporteRadicacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsAspx\ReporteRecepcion.aspx.cs">
+      <DependentUpon>ReporteRecepcion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewsAspx\ReporteRecepcion.aspx.designer.cs">
+      <DependentUpon>ReporteRecepcion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsAspx\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewsAspx\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsAspx\AsignacionMenuPerfiles.aspx.cs">
+      <DependentUpon>AsignacionMenuPerfiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewsAspx\AsignacionMenuPerfiles.aspx.designer.cs">
+      <DependentUpon>AsignacionMenuPerfiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsAspx\CapturaInformacion.aspx.cs">
+      <DependentUpon>CapturaInformacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewsAspx\CapturaInformacion.aspx.designer.cs">
+      <DependentUpon>CapturaInformacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsAspx\ConsultaDocsNegocios.aspx.cs">
+      <DependentUpon>ConsultaDocsNegocios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewsAspx\ConsultaDocsNegocios.aspx.designer.cs">
+      <DependentUpon>ConsultaDocsNegocios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsAspx\CrearPerfiles.aspx.cs">
+      <DependentUpon>CrearPerfiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewsAspx\CrearPerfiles.aspx.designer.cs">
+      <DependentUpon>CrearPerfiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsAspx\CrearUsuarios.aspx.cs">
+      <DependentUpon>CrearUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewsAspx\CrearUsuarios.aspx.designer.cs">
+      <DependentUpon>CrearUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsAspx\IndexacionImg.aspx.cs">
+      <DependentUpon>IndexacionImg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewsAspx\IndexacionImg.aspx.designer.cs">
+      <DependentUpon>IndexacionImg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsAspx\Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewsAspx\Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsAspx\ReporteEstadoNegocios.aspx.cs">
+      <DependentUpon>ReporteEstadoNegocios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewsAspx\ReporteEstadoNegocios.aspx.designer.cs">
+      <DependentUpon>ReporteEstadoNegocios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsAspx\ReporteResumenNegocios.aspx.cs">
+      <DependentUpon>ReporteResumenNegocios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewsAspx\ReporteResumenNegocios.aspx.designer.cs">
+      <DependentUpon>ReporteResumenNegocios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web References\wsLogin\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\CodigoBarras.dll" />
+    <Content Include="bin\DevExpress.Charts.v11.2.Core.dll" />
+    <Content Include="bin\DevExpress.Data.v11.2.dll" />
+    <Content Include="bin\DevExpress.Design.v11.2.dll" />
+    <Content Include="bin\DevExpress.PivotGrid.v11.2.Core.dll" />
+    <Content Include="bin\DevExpress.Printing.v11.2.Core.dll" />
+    <Content Include="bin\DevExpress.RichEdit.v11.2.Core.dll" />
+    <Content Include="bin\DevExpress.SpellChecker.v11.2.Core.dll" />
+    <Content Include="bin\DevExpress.Utils.v11.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxEditors.v11.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxGridView.v11.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxHtmlEditor.v11.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxPivotGrid.v11.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxPivotGrid.v11.2.Export.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxSpellChecker.v11.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxThemes.v11.2.dll" />
+    <Content Include="bin\DevExpress.Web.Mvc.v11.2.dll" />
+    <Content Include="bin\DevExpress.Web.v11.2.dll" />
+    <Content Include="bin\DevExpress.XtraBars.v11.2.Design.dll" />
+    <Content Include="bin\DevExpress.XtraBars.v11.2.dll" />
+    <Content Include="bin\DevExpress.XtraCharts.v11.2.dll" />
+    <Content Include="bin\DevExpress.XtraCharts.v11.2.Web.dll" />
+    <Content Include="bin\DevExpress.XtraEditors.v11.2.Design.dll" />
+    <Content Include="bin\DevExpress.XtraEditors.v11.2.dll" />
+    <Content Include="bin\DevExpress.XtraNavBar.v11.2.dll" />
+    <Content Include="bin\DevExpress.XtraPivotGrid.v11.2.Design.dll" />
+    <Content Include="bin\DevExpress.XtraPivotGrid.v11.2.dll" />
+    <Content Include="bin\DevExpress.XtraPrinting.v11.2.Design.dll" />
+    <Content Include="bin\DevExpress.XtraPrinting.v11.2.dll" />
+    <Content Include="bin\DevExpress.XtraReports.v11.2.dll" />
+    <Content Include="bin\DevExpress.XtraReports.v11.2.Web.dll" />
+    <Content Include="bin\DevExpress.XtraTreeList.v11.2.dll" />
+    <Content Include="bin\GestorDocumental.dll" />
+    <Content Include="bin\GestorDocumental.pdb" />
+    <Content Include="bin\Microsoft.ReportViewer.WebForms.dll" />
+    <Content Include="bin\SautinSoft.PdfFocus.dll" />
+    <Content Include="bin\SharpZebra.dll" />
+    <Content Include="bin\System.ComponentModel.DataAnnotations.dll" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\Telerik.Web.Mvc.dll" />
+    <Content Include="Content\2013.1.219\Black\editor.png" />
+    <Content Include="Content\2013.1.219\Black\imagebrowser.png" />
+    <Content Include="Content\2013.1.219\Black\loading.gif" />
+    <Content Include="Content\2013.1.219\Black\slider-h.gif" />
+    <Content Include="Content\2013.1.219\Black\slider-v.gif" />
+    <Content Include="Content\2013.1.219\Black\sprite-vertical.png" />
+    <Content Include="Content\2013.1.219\Black\sprite.png" />
+    <Content Include="Content\2013.1.219\Black\treeview-line.png" />
+    <Content Include="Content\2013.1.219\Black\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.1.219\Black\treeview-nodes.png" />
+    <Content Include="Content\2013.1.219\Default\editor.png" />
+    <Content Include="Content\2013.1.219\Default\imagebrowser.png" />
+    <Content Include="Content\2013.1.219\Default\loading.gif" />
+    <Content Include="Content\2013.1.219\Default\slider-h.gif" />
+    <Content Include="Content\2013.1.219\Default\slider-v.gif" />
+    <Content Include="Content\2013.1.219\Default\sprite-vertical.png" />
+    <Content Include="Content\2013.1.219\Default\sprite.png" />
+    <Content Include="Content\2013.1.219\Default\treeview-line.png" />
+    <Content Include="Content\2013.1.219\Default\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.1.219\Default\treeview-nodes.png" />
+    <Content Include="Content\2013.1.219\Forest\editor.png" />
+    <Content Include="Content\2013.1.219\Forest\imagebrowser.png" />
+    <Content Include="Content\2013.1.219\Forest\loading.gif" />
+    <Content Include="Content\2013.1.219\Forest\slider-h.gif" />
+    <Content Include="Content\2013.1.219\Forest\slider-v.gif" />
+    <Content Include="Content\2013.1.219\Forest\sprite-vertical.png" />
+    <Content Include="Content\2013.1.219\Forest\sprite.png" />
+    <Content Include="Content\2013.1.219\Forest\treeview-line.png" />
+    <Content Include="Content\2013.1.219\Forest\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.1.219\Forest\treeview-nodes.png" />
+    <Content Include="Content\2013.1.219\Hay\editor.png" />
+    <Content Include="Content\2013.1.219\Hay\imagebrowser.png" />
+    <Content Include="Content\2013.1.219\Hay\loading.gif" />
+    <Content Include="Content\2013.1.219\Hay\slider-h.gif" />
+    <Content Include="Content\2013.1.219\Hay\slider-v.gif" />
+    <Content Include="Content\2013.1.219\Hay\sprite-vertical.png" />
+    <Content Include="Content\2013.1.219\Hay\sprite.png" />
+    <Content Include="Content\2013.1.219\Hay\treeview-line.png" />
+    <Content Include="Content\2013.1.219\Hay\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.1.219\Hay\treeview-nodes.png" />
+    <Content Include="Content\2013.1.219\Metro\editor.png" />
+    <Content Include="Content\2013.1.219\Metro\imagebrowser.png" />
+    <Content Include="Content\2013.1.219\Metro\loading.gif" />
+    <Content Include="Content\2013.1.219\Metro\slider-h.gif" />
+    <Content Include="Content\2013.1.219\Metro\slider-v.gif" />
+    <Content Include="Content\2013.1.219\Metro\sprite.png" />
+    <Content Include="Content\2013.1.219\Office2007\editor.png" />
+    <Content Include="Content\2013.1.219\Office2007\imagebrowser.png" />
+    <Content Include="Content\2013.1.219\Office2007\loading.gif" />
+    <Content Include="Content\2013.1.219\Office2007\slider-h.gif" />
+    <Content Include="Content\2013.1.219\Office2007\slider-v.gif" />
+    <Content Include="Content\2013.1.219\Office2007\sprite-vertical.png" />
+    <Content Include="Content\2013.1.219\Office2007\sprite.png" />
+    <Content Include="Content\2013.1.219\Office2007\treeview-line.png" />
+    <Content Include="Content\2013.1.219\Office2007\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.1.219\Office2007\treeview-nodes.png" />
+    <Content Include="Content\2013.1.219\Office2010Black\editor.png" />
+    <Content Include="Content\2013.1.219\Office2010Black\imagebrowser.png" />
+    <Content Include="Content\2013.1.219\Office2010Black\loading.gif" />
+    <Content Include="Content\2013.1.219\Office2010Black\slider-h.gif" />
+    <Content Include="Content\2013.1.219\Office2010Black\slider-v.gif" />
+    <Content Include="Content\2013.1.219\Office2010Black\sprite-vertical.png" />
+    <Content Include="Content\2013.1.219\Office2010Black\sprite.png" />
+    <Content Include="Content\2013.1.219\Office2010Black\treeview-line.png" />
+    <Content Include="Content\2013.1.219\Office2010Black\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.1.219\Office2010Black\treeview-nodes.png" />
+    <Content Include="Content\2013.1.219\Office2010Blue\editor.png" />
+    <Content Include="Content\2013.1.219\Office2010Blue\gradient.png" />
+    <Content Include="Content\2013.1.219\Office2010Blue\imagebrowser.png" />
+    <Content Include="Content\2013.1.219\Office2010Blue\loading.gif" />
+    <Content Include="Content\2013.1.219\Office2010Blue\slider-h.gif" />
+    <Content Include="Content\2013.1.219\Office2010Blue\slider-v.gif" />
+    <Content Include="Content\2013.1.219\Office2010Blue\sprite-vertical.png" />
+    <Content Include="Content\2013.1.219\Office2010Blue\sprite.png" />
+    <Content Include="Content\2013.1.219\Office2010Silver\editor.png" />
+    <Content Include="Content\2013.1.219\Office2010Silver\gradient.png" />
+    <Content Include="Content\2013.1.219\Office2010Silver\imagebrowser.png" />
+    <Content Include="Content\2013.1.219\Office2010Silver\loading.gif" />
+    <Content Include="Content\2013.1.219\Office2010Silver\slider-h.gif" />
+    <Content Include="Content\2013.1.219\Office2010Silver\slider-v.gif" />
+    <Content Include="Content\2013.1.219\Office2010Silver\sprite-vertical.png" />
+    <Content Include="Content\2013.1.219\Office2010Silver\sprite.png" />
+    <Content Include="Content\2013.1.219\Outlook\editor.png" />
+    <Content Include="Content\2013.1.219\Outlook\imagebrowser.png" />
+    <Content Include="Content\2013.1.219\Outlook\loading.gif" />
+    <Content Include="Content\2013.1.219\Outlook\slider-h.gif" />
+    <Content Include="Content\2013.1.219\Outlook\slider-v.gif" />
+    <Content Include="Content\2013.1.219\Outlook\sprite-vertical.png" />
+    <Content Include="Content\2013.1.219\Outlook\sprite.png" />
+    <Content Include="Content\2013.1.219\Outlook\treeview-line.png" />
+    <Content Include="Content\2013.1.219\Outlook\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.1.219\Outlook\treeview-nodes.png" />
+    <Content Include="Content\2013.1.219\Simple\editor.png" />
+    <Content Include="Content\2013.1.219\Simple\imagebrowser.png" />
+    <Content Include="Content\2013.1.219\Simple\loading.gif" />
+    <Content Include="Content\2013.1.219\Simple\slider-h.gif" />
+    <Content Include="Content\2013.1.219\Simple\slider-v.gif" />
+    <Content Include="Content\2013.1.219\Simple\sprite.png" />
+    <Content Include="Content\2013.1.219\Simple\treeview-line.png" />
+    <Content Include="Content\2013.1.219\Simple\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.1.219\Simple\treeview-nodes.png" />
+    <Content Include="Content\2013.1.219\Sitefinity\editor.png" />
+    <Content Include="Content\2013.1.219\Sitefinity\imagebrowser.png" />
+    <Content Include="Content\2013.1.219\Sitefinity\loading.gif" />
+    <Content Include="Content\2013.1.219\Sitefinity\slider-h.gif" />
+    <Content Include="Content\2013.1.219\Sitefinity\slider-v.gif" />
+    <Content Include="Content\2013.1.219\Sitefinity\sprite-vertical.png" />
+    <Content Include="Content\2013.1.219\Sitefinity\sprite.png" />
+    <Content Include="Content\2013.1.219\Sitefinity\treeview-line.png" />
+    <Content Include="Content\2013.1.219\Sitefinity\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.1.219\Sitefinity\treeview-nodes.png" />
+    <Content Include="Content\2013.1.219\Sunset\editor.png" />
+    <Content Include="Content\2013.1.219\Sunset\imagebrowser.png" />
+    <Content Include="Content\2013.1.219\Sunset\loading.gif" />
+    <Content Include="Content\2013.1.219\Sunset\slider-h.gif" />
+    <Content Include="Content\2013.1.219\Sunset\slider-v.gif" />
+    <Content Include="Content\2013.1.219\Sunset\sprite-vertical.png" />
+    <Content Include="Content\2013.1.219\Sunset\sprite.png" />
+    <Content Include="Content\2013.1.219\Sunset\treeview-line.png" />
+    <Content Include="Content\2013.1.219\Sunset\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.1.219\Sunset\treeview-nodes.png" />
+    <Content Include="Content\2013.1.219\telerik.black.min.css" />
+    <Content Include="Content\2013.1.219\telerik.common.min.css" />
+    <Content Include="Content\2013.1.219\telerik.default.min.css" />
+    <Content Include="Content\2013.1.219\telerik.forest.min.css" />
+    <Content Include="Content\2013.1.219\telerik.hay.min.css" />
+    <Content Include="Content\2013.1.219\telerik.metro.min.css" />
+    <Content Include="Content\2013.1.219\telerik.office2007.min.css" />
+    <Content Include="Content\2013.1.219\telerik.office2010black.min.css" />
+    <Content Include="Content\2013.1.219\telerik.office2010blue.min.css" />
+    <Content Include="Content\2013.1.219\telerik.office2010silver.min.css" />
+    <Content Include="Content\2013.1.219\telerik.outlook.min.css" />
+    <Content Include="Content\2013.1.219\telerik.rtl.min.css" />
+    <Content Include="Content\2013.1.219\telerik.simple.min.css" />
+    <Content Include="Content\2013.1.219\telerik.sitefinity.min.css" />
+    <Content Include="Content\2013.1.219\telerik.sunset.min.css" />
+    <Content Include="Content\2013.1.219\telerik.telerik.min.css" />
+    <Content Include="Content\2013.1.219\telerik.transparent.min.css" />
+    <Content Include="Content\2013.1.219\telerik.vista.min.css" />
+    <Content Include="Content\2013.1.219\telerik.web20.min.css" />
+    <Content Include="Content\2013.1.219\telerik.webblue.min.css" />
+    <Content Include="Content\2013.1.219\telerik.windows7.min.css" />
+    <Content Include="Content\2013.1.219\Telerik\editor.png" />
+    <Content Include="Content\2013.1.219\Telerik\imagebrowser.png" />
+    <Content Include="Content\2013.1.219\Telerik\loading.gif" />
+    <Content Include="Content\2013.1.219\Telerik\slider-h.gif" />
+    <Content Include="Content\2013.1.219\Telerik\slider-v.gif" />
+    <Content Include="Content\2013.1.219\Telerik\sprite-vertical.png" />
+    <Content Include="Content\2013.1.219\Telerik\sprite.png" />
+    <Content Include="Content\2013.1.219\Telerik\treeview-line.png" />
+    <Content Include="Content\2013.1.219\Telerik\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.1.219\Telerik\treeview-nodes.png" />
+    <Content Include="Content\2013.1.219\Transparent\active.png" />
+    <Content Include="Content\2013.1.219\Transparent\editor.png" />
+    <Content Include="Content\2013.1.219\Transparent\gradient.png" />
+    <Content Include="Content\2013.1.219\Transparent\group.png" />
+    <Content Include="Content\2013.1.219\Transparent\hover.png" />
+    <Content Include="Content\2013.1.219\Transparent\imagebrowser.png" />
+    <Content Include="Content\2013.1.219\Transparent\loading.gif" />
+    <Content Include="Content\2013.1.219\Transparent\selected.png" />
+    <Content Include="Content\2013.1.219\Transparent\slider-h.gif" />
+    <Content Include="Content\2013.1.219\Transparent\slider-v.gif" />
+    <Content Include="Content\2013.1.219\Transparent\sprite-vertical.png" />
+    <Content Include="Content\2013.1.219\Transparent\sprite.png" />
+    <Content Include="Content\2013.1.219\Transparent\toolbar.png" />
+    <Content Include="Content\2013.1.219\Transparent\widget.png" />
+    <Content Include="Content\2013.1.219\Vista\editor.png" />
+    <Content Include="Content\2013.1.219\Vista\imagebrowser.png" />
+    <Content Include="Content\2013.1.219\Vista\loading.gif" />
+    <Content Include="Content\2013.1.219\Vista\slider-h.gif" />
+    <Content Include="Content\2013.1.219\Vista\slider-v.gif" />
+    <Content Include="Content\2013.1.219\Vista\sprite-vertical.png" />
+    <Content Include="Content\2013.1.219\Vista\sprite.png" />
+    <Content Include="Content\2013.1.219\Web20\editor.png" />
+    <Content Include="Content\2013.1.219\Web20\imagebrowser.png" />
+    <Content Include="Content\2013.1.219\Web20\loading.gif" />
+    <Content Include="Content\2013.1.219\Web20\slider-h.gif" />
+    <Content Include="Content\2013.1.219\Web20\slider-v.gif" />
+    <Content Include="Content\2013.1.219\Web20\sprite-vertical.png" />
+    <Content Include="Content\2013.1.219\Web20\sprite.png" />
+    <Content Include="Content\2013.1.219\Web20\treeview-line.png" />
+    <Content Include="Content\2013.1.219\Web20\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.1.219\Web20\treeview-nodes.png" />
+    <Content Include="Content\2013.1.219\WebBlue\editor.png" />
+    <Content Include="Content\2013.1.219\WebBlue\imagebrowser.png" />
+    <Content Include="Content\2013.1.219\WebBlue\loading.gif" />
+    <Content Include="Content\2013.1.219\WebBlue\slider-h.gif" />
+    <Content Include="Content\2013.1.219\WebBlue\slider-v.gif" />
+    <Content Include="Content\2013.1.219\WebBlue\sprite-vertical.png" />
+    <Content Include="Content\2013.1.219\WebBlue\sprite.png" />
+    <Content Include="Content\2013.1.219\WebBlue\treeview-line.png" />
+    <Content Include="Content\2013.1.219\WebBlue\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.1.219\WebBlue\treeview-nodes.png" />
+    <Content Include="Content\2013.1.219\Windows7\editor.png" />
+    <Content Include="Content\2013.1.219\Windows7\imagebrowser.png" />
+    <Content Include="Content\2013.1.219\Windows7\loading.gif" />
+    <Content Include="Content\2013.1.219\Windows7\slider-h.gif" />
+    <Content Include="Content\2013.1.219\Windows7\slider-v.gif" />
+    <Content Include="Content\2013.1.219\Windows7\sprite-vertical.png" />
+    <Content Include="Content\2013.1.219\Windows7\sprite.png" />
+    <Content Include="Content\Images\caja.png" />
+    <Content Include="Content\Images\calendar.gif" />
+    <Content Include="Content\Images\GrillaTelerik\filtros.png" />
+    <Content Include="Content\Images\logo_gas_natural.png" />
+    <Content Include="Content\Scripts\Page\ajax.js" />
+    <Content Include="Content\Scripts\Page\fx.js" />
+    <Content Include="Content\Scripts\Page\JqGrilla.js" />
+    <Content Include="Content\Scripts\Page\templates.js" />
+    <Content Include="Content\Scripts\Page\_fx.js" />
+    <Content Include="Content\Scripts\Page\_ui.js" />
+    <Content Include="Content\Scripts\pqgrid.min.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery-ui-i18n.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-af.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-ar-DZ.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-ar.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-az.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-be.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-bg.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-bs.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-ca.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-cs.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-cy-GB.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-da.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-de.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-el.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-en-AU.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-en-GB.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-en-NZ.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-eo.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-es.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-et.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-eu.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-fa.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-fi.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-fo.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-fr-CA.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-fr-CH.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-fr.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-gl.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-he.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-hi.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-hr.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-hu.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-hy.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-id.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-is.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-it.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-ja.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-ka.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-kk.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-km.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-ko.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-ky.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-lb.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-lt.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-lv.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-mk.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-ml.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-ms.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-nb.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-nl-BE.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-nl.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-nn.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-no.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-pl.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-pt-BR.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-pt.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-rm.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-ro.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-ru.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-sk.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-sl.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-sq.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-sr-SR.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-sr.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-sv.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-ta.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-th.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-tj.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-tr.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-uk.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-vi.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-zh-HK.js" />
+    <Content Include="Content\Scripts\ui\i18n\jquery.ui.datepicker-zh-TW.js" />
+    <Content Include="Content\Scripts\ui\jquery-1.10.1.min.js" />
+    <Content Include="Content\Scripts\ui\jquery-1.8.3.js" />
+    <Content Include="Content\Scripts\ui\jquery-ui.custom.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.accordion.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.autocomplete.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.button.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.core.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.datepicker.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.dialog.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.draggable.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.droppable.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.effect-blind.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.effect-bounce.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.effect-clip.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.effect-drop.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.effect-explode.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.effect-fade.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.effect-fold.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.effect-highlight.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.effect-pulsate.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.effect-scale.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.effect-shake.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.effect-slide.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.effect-transfer.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.effect.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.menu.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.mouse.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.position.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.progressbar.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.resizable.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.selectable.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.slider.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.sortable.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.spinner.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.tabs.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.tooltip.js" />
+    <Content Include="Content\Scripts\ui\jquery.ui.widget.js" />
+    <Content Include="Content\Styles\comboboxUI.css" />
+    <Content Include="Content\Styles\Default.css" />
+    <Content Include="Content\Styles\Default1.css" />
+    <Content Include="Content\Styles\estilos.css" />
+    <Content Include="Content\Styles\examples.css" />
+    <Content Include="Content\Images\logon_everis.png" />
+    <Content Include="Content\Images\logo_everis.png" />
+    <Content Include="Content\Images\paneh.gif" />
+    <Content Include="Content\Images\panehc.gif" />
+    <Content Include="Content\Images\panev.gif" />
+    <Content Include="Content\Images\panevc.gif" />
+    <Content Include="Content\Styles\impromptu.css" />
+    <Content Include="Content\Styles\layout-default-latest.css" />
+    <Content Include="Content\Styles\loginStyles.css" />
+    <Content Include="Content\Scripts\blockUIOnAllAjaxRequests.js" />
+    <Content Include="Content\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Content\Scripts\jquery-1.4.1.js" />
+    <Content Include="Content\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Content\Scripts\jquery-1.4.3.min.js" />
+    <Content Include="Content\Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="Content\Scripts\jquery-1.6.4.js" />
+    <Content Include="Content\Scripts\jquery-1.6.4.min.js" />
+    <Content Include="Content\Scripts\jquery-1.7.2.min.js" />
+    <Content Include="Content\Scripts\jquery-impromptu.4.0.min.js" />
+    <Content Include="Content\Scripts\jquery-latest.js" />
+    <Content Include="Content\Scripts\jquery.blockUI.js" />
+    <Content Include="Content\Scripts\jquery.layout-latest.js" />
+    <Content Include="Content\Scripts\jquery.signalR-0.5.3.js" />
+    <Content Include="Content\Scripts\jquery.signalR-0.5.3.min.js" />
+    <Content Include="Content\Scripts\splitter.js" />
+    <Content Include="Content\Scripts\splitter1.js" />
+    <Content Include="Content\Styles\page.css" />
+    <Content Include="Content\Styles\pqgrid.css" />
+    <Content Include="Content\Styles\pqgrid.min.css" />
+    <Content Include="Content\Styles\Site.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.menu.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.spinner.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\controls.css" />
+    <Content Include="Content\themes\demos.css" />
+    <Content Include="Content\themes\responsive\css\bootstrap-rtl.css" />
+    <Content Include="Content\themes\responsive\css\bootstrap-rtl.min.css" />
+    <Content Include="Content\themes\responsive\css\bootstrap.css" />
+    <Content Include="Content\themes\responsive\css\bootstrap.min.css" />
+    <Content Include="Content\themes\responsive\css\fonts\fontawesome.svg" />
+    <Content Include="Content\themes\responsive\css\plugins\component.css" />
+    <Content Include="Content\themes\responsive\css\plugins\default.css" />
+    <Content Include="Content\themes\responsive\css\plugins\morris.css" />
+    <Content Include="Content\themes\responsive\css\sb-admin-rtl.css" />
+    <Content Include="Content\themes\responsive\css\sb-admin.css" />
+    <Content Include="Content\themes\responsive\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\themes\responsive\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\themes\responsive\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\themes\responsive\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\themes\responsive\js\bootstrap.js" />
+    <Content Include="Content\themes\responsive\js\bootstrap.min.js" />
+    <Content Include="Content\themes\responsive\js\flot\excanvas.min.js" />
+    <Content Include="Content\themes\responsive\js\flot\flot-data.js" />
+    <Content Include="Content\themes\responsive\js\flot\jquery.flot.js" />
+    <Content Include="Content\themes\responsive\js\flot\jquery.flot.pie.js" />
+    <Content Include="Content\themes\responsive\js\flot\jquery.flot.resize.js" />
+    <Content Include="Content\themes\responsive\js\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Content\themes\responsive\js\jquery.js" />
+    <Content Include="Content\themes\responsive\js\plugins\classie.js" />
+    <Content Include="Content\themes\responsive\js\plugins\modernizr.custom.js" />
+    <Content Include="Content\themes\responsive\js\plugins\morris\morris-data.js" />
+    <Content Include="Content\themes\responsive\js\plugins\morris\morris.js" />
+    <Content Include="Content\themes\responsive\js\plugins\morris\morris.min.js" />
+    <Content Include="Content\themes\responsive\js\plugins\morris\raphael.min.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\Barra.fw.png" />
+    <Content Include="Images\bc.png" />
+    <Content Include="Images\cargando.gif" />
+    <Content Include="Images\Delete.png" />
+    <Content Include="Images\ErrorPage.png" />
+    <Content Include="Images\Everis1.fw.png" />
+    <Content Include="Images\Everis1.jpg" />
+    <Content Include="Images\Everis2.jpg" />
+    <Content Include="Images\Grilla\arrow-us-down.gif" />
+    <Content Include="Images\Grilla\arrow-us-up.gif" />
+    <Content Include="Images\Grilla\column-header-over-bg.gif" />
+    <Content Include="Images\Grilla\cross.png" />
+    <Content Include="Images\Grilla\horiz-bg.png" />
+    <Content Include="Images\Grilla\horiz-slider-bg.png" />
+    <Content Include="Images\Grilla\loading.gif" />
+    <Content Include="Images\Grilla\page-first-gray.gif" />
+    <Content Include="Images\Grilla\page-last-gray.gif" />
+    <Content Include="Images\Grilla\page-next-gray.gif" />
+    <Content Include="Images\Grilla\page-prev-gray.gif" />
+    <Content Include="Images\Grilla\Refresh.gif" />
+    <Content Include="Images\Grilla\sort_asc.gif" />
+    <Content Include="Images\Grilla\sort_desc.gif" />
+    <Content Include="Images\Grilla\sprite.png" />
+    <Content Include="Images\Grilla\tick.png" />
+    <Content Include="Images\Grilla\vert-bg.png" />
+    <Content Include="Images\Grilla\vert-slider-bg.png" />
+    <Content Include="Images\Icono.ico" />
+    <Content Include="Images\IconosMenu\Boton.png" />
+    <Content Include="Images\IconosMenu\Home.png" />
+    <Content Include="Images\IconosMenu\Imagen1.png" />
+    <Content Include="Images\IconosMenu\Imagen2.png" />
+    <Content Include="Images\IconosMenu\Imagen3.png" />
+    <Content Include="Images\IconosMenu\Imagen4.png" />
+    <Content Include="Images\IconosMenu\Imagen5.png" />
+    <Content Include="Images\IconosMenu\Imagen6.png" />
+    <Content Include="Images\IconosMenu\Imagen7.png" />
+    <Content Include="Images\MpLogoGestor.png" />
+    <Content Include="Images\Semaforo\CirculoRojo.png" />
+    <Content Include="Images\Semaforo\CirculoVerde.png" />
+    <Content Include="Images\Slides\Slide1.png" />
+    <Content Include="Images\Slides\Slide2.png" />
+    <Content Include="Images\Slides\Slide3.png" />
+    <Content Include="Images\Splitter\paneh.gif" />
+    <Content Include="Images\Splitter\panehc.gif" />
+    <Content Include="Images\Splitter\panev.gif" />
+    <Content Include="Images\Splitter\panevc.gif" />
+    <Content Include="Content\themes\responsive\css\fonts\.DS_Store" />
+    <Content Include="Content\themes\responsive\css\fonts\fontawesome.eot" />
+    <Content Include="Content\themes\responsive\css\fonts\fontawesome.ttf" />
+    <Content Include="Content\themes\responsive\css\fonts\fontawesome.woff" />
+    <Content Include="Content\themes\responsive\css\fonts\readme.md" />
+    <Content Include="Content\themes\responsive\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\themes\responsive\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\themes\responsive\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\themes\responsive\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\themes\responsive\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Content\themes\responsive\font-awesome\less\core.less" />
+    <Content Include="Content\themes\responsive\font-awesome\less\fixed-width.less" />
+    <Content Include="Content\themes\responsive\font-awesome\less\font-awesome.less" />
+    <Content Include="Content\themes\responsive\font-awesome\less\icons.less" />
+    <Content Include="Content\themes\responsive\font-awesome\less\larger.less" />
+    <Content Include="Content\themes\responsive\font-awesome\less\list.less" />
+    <Content Include="Content\themes\responsive\font-awesome\less\mixins.less" />
+    <Content Include="Content\themes\responsive\font-awesome\less\path.less" />
+    <Content Include="Content\themes\responsive\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Content\themes\responsive\font-awesome\less\spinning.less" />
+    <Content Include="Content\themes\responsive\font-awesome\less\stacked.less" />
+    <Content Include="Content\themes\responsive\font-awesome\less\variables.less" />
+    <Content Include="Content\themes\responsive\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Content\themes\responsive\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\themes\responsive\font-awesome\scss\_core.scss" />
+    <Content Include="Content\themes\responsive\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Content\themes\responsive\font-awesome\scss\_icons.scss" />
+    <Content Include="Content\themes\responsive\font-awesome\scss\_larger.scss" />
+    <Content Include="Content\themes\responsive\font-awesome\scss\_list.scss" />
+    <Content Include="Content\themes\responsive\font-awesome\scss\_mixins.scss" />
+    <Content Include="Content\themes\responsive\font-awesome\scss\_path.scss" />
+    <Content Include="Content\themes\responsive\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\themes\responsive\font-awesome\scss\_spinning.scss" />
+    <Content Include="Content\themes\responsive\font-awesome\scss\_stacked.scss" />
+    <Content Include="Content\themes\responsive\font-awesome\scss\_variables.scss" />
+    <Content Include="Content\themes\responsive\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\themes\responsive\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\themes\responsive\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\themes\responsive\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Properties\PublishProfiles\BcoPopularCertificacion.pubxml" />
+    <None Include="Properties\PublishProfiles\deployPeru.pubxml" />
+    <None Include="Properties\PublishProfiles\ProduccionLocal.pubxml" />
+    <None Include="Properties\PublishProfiles\SmartFileBcoPopular.pubxml" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Scripts\cldr.js" />
+    <Content Include="Scripts\cldr\event.js" />
+    <Content Include="Scripts\cldr\supplemental.js" />
+    <Content Include="Scripts\cldr\unresolved.js" />
+    <Content Include="Scripts\easyTree.js" />
+    <Content Include="Scripts\globalize.js" />
+    <Content Include="Scripts\globalize\currency.js" />
+    <Content Include="Scripts\globalize\date.js" />
+    <Content Include="Scripts\globalize\message.js" />
+    <Content Include="Scripts\globalize\number.js" />
+    <Content Include="Scripts\globalize\plural.js" />
+    <Content Include="Scripts\globalize\relative-time.js" />
+    <Content Include="Scripts\globalize\unit.js" />
+    <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Styles\BootsTrap\js\bootbox.js" />
+    <Content Include="Styles\easyTree.css" />
+    <Content Include="Styles\jquery-ui.css" />
+    <Content Include="Styles\JQueryUiBase\jquery.dataTables.css" />
+    <Content Include="Styles\menu-6.css" />
+    <Content Include="Styles\StyleMenu\jquery.sidr.light.css" />
+    <Content Include="Styles\StyleMenu\jquery.sidr.min.js" />
+    <Content Include="ViewsAspx\PageErrors\ErrorPage.html" />
+    <Content Include="Scripts\2013.1.219\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\2013.1.219\jquery.validate.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.all.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.autocomplete.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.calendar.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.chart.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.combobox.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.common.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.datepicker.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.datetimepicker.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.draganddrop.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.editor.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.grid.editing.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.grid.filtering.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.grid.grouping.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.grid.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.grid.reordering.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.grid.resizing.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.imagebrowser.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.list.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.menu.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.panelbar.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.slider.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.splitter.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.tabstrip.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.textbox.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.timepicker.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.treeview.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.upload.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.window.min.js" />
+    <Content Include="Scripts\additional-methods.js" />
+    <Content Include="Scripts\FuncionesValidacionCliente.js" />
+    <Content Include="Scripts\jqBootstrapValidation.js" />
+    <Content Include="Scripts\jquery-1.11.0.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery.maskedinput.js" />
+    <Content Include="Scripts\jquery.maskedinput.min.js" />
+    <Content Include="Scripts\jquery.passwordstrength.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\Listas.js" />
+    <Content Include="Scripts\ListasCiudades.js" />
+    <Content Include="Scripts\MenuContext\cmenu-gloss-bg.gif" />
+    <Content Include="Scripts\MenuContext\cmenu-gloss-cyan-menu-item-hover.gif" />
+    <Content Include="Scripts\MenuContext\cmenu-gloss-menu-item-hover.gif" />
+    <Content Include="Scripts\MenuContext\cmenu-gloss-semitransparent-menu-item-hover.png" />
+    <Content Include="Scripts\MenuContext\cmenu-human-menu-item-hover.gif" />
+    <Content Include="Scripts\MenuContext\cmenu-osx-menu-item-hover.gif" />
+    <Content Include="Scripts\MenuContext\cmenu-vista-bg.gif" />
+    <Content Include="Scripts\MenuContext\cmenu-vista-menu-item-hover.gif" />
+    <Content Include="Scripts\MenuContext\cmenu-xp-bg.gif" />
+    <Content Include="Scripts\MenuContext\disabled.ico" />
+    <Content Include="Scripts\MenuContext\ilegible.ico" />
+    <Content Include="Scripts\MenuContext\jquery-2.1.1.js" />
+    <Content Include="Scripts\MenuContext\jquery.contextmenu.css" />
+    <Content Include="Scripts\MenuContext\jquery.contextmenu.js" />
+    <Content Include="Scripts\page\validaciones.js" />
+    <Content Include="Scripts\Reestricciones.js" />
+    <Content Include="Scripts\splitter.js" />
+    <Content Include="Scripts\treeview\images\ajax-loader.gif" />
+    <Content Include="Scripts\treeview\images\file.gif" />
+    <Content Include="Scripts\treeview\images\folder-closed.gif" />
+    <Content Include="Scripts\treeview\images\folder.gif" />
+    <Content Include="Scripts\treeview\images\minus.gif" />
+    <Content Include="Scripts\treeview\images\plus.gif" />
+    <Content Include="Scripts\treeview\images\treeview-black-line.gif" />
+    <Content Include="Scripts\treeview\images\treeview-black.gif" />
+    <Content Include="Scripts\treeview\images\treeview-default-line.gif" />
+    <Content Include="Scripts\treeview\images\treeview-default.gif" />
+    <Content Include="Scripts\treeview\images\treeview-famfamfam-line.gif" />
+    <Content Include="Scripts\treeview\images\treeview-famfamfam.gif" />
+    <Content Include="Scripts\treeview\images\treeview-gray-line.gif" />
+    <Content Include="Scripts\treeview\images\treeview-gray.gif" />
+    <Content Include="Scripts\treeview\images\treeview-red-line.gif" />
+    <Content Include="Scripts\treeview\images\treeview-red.gif" />
+    <Content Include="Scripts\treeview\jquery.cookie.js" />
+    <Content Include="Scripts\treeview\jquery.js" />
+    <Content Include="Scripts\treeview\jquery.treeview.async.js" />
+    <Content Include="Scripts\treeview\jquery.treeview.css" />
+    <Content Include="Scripts\treeview\jquery.treeview.edit.js" />
+    <Content Include="Scripts\treeview\jquery.treeview.js" />
+    <Content Include="Scripts\treeview\jquery.treeview.sortable.js" />
+    <None Include="Content\Recursos\WSDL\YCONSOLA-CARGA-WS_URL_EF2_300.WSDL" />
+    <Content Include="Scripts\ListasPadre.js" />
+    <Content Include="Styles\bootstrap-theme.css" />
+    <Content Include="Styles\bootstrap-theme.min.css" />
+    <Content Include="Styles\bootstrap.css" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\BootsTrap\css\bootstrap-responsive.css" />
+    <Content Include="Styles\BootsTrap\css\bootstrap-theme.css" />
+    <Content Include="Styles\BootsTrap\css\bootstrap-theme.min.css" />
+    <Content Include="Styles\BootsTrap\css\bootstrap.css" />
+    <Content Include="Styles\BootsTrap\css\bootstrap.min.css" />
+    <Content Include="Styles\BootsTrap\css\datepicker.css" />
+    <Content Include="Styles\BootsTrap\js\bootstrap-datepicker.js" />
+    <Content Include="Styles\BootsTrap\js\bootstrap.js" />
+    <Content Include="Styles\BootsTrap\js\bootstrap.min.js" />
+    <Content Include="Styles\BootsTrap\js\locales\bootstrap-datepicker.es.js" />
+    <Content Include="Styles\InicioStyle.css" />
+    <Content Include="Styles\jquery.ui.datepicker.css" />
+    <Content Include="Styles\JQueryUiBase\demos.css" />
+    <Content Include="Styles\JQueryUiBase\images\animated-overlay.gif" />
+    <Content Include="Styles\JQueryUiBase\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Styles\JQueryUiBase\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Styles\JQueryUiBase\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Styles\JQueryUiBase\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Styles\JQueryUiBase\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Styles\JQueryUiBase\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Styles\JQueryUiBase\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Styles\JQueryUiBase\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Styles\JQueryUiBase\images\ui-icons_222222_256x240.png" />
+    <Content Include="Styles\JQueryUiBase\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Styles\JQueryUiBase\images\ui-icons_454545_256x240.png" />
+    <Content Include="Styles\JQueryUiBase\images\ui-icons_888888_256x240.png" />
+    <Content Include="Styles\JQueryUiBase\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Styles\JQueryUiBase\jquery-ui.css" />
+    <Content Include="Styles\JQueryUiBase\jquery.ui.accordion.css" />
+    <Content Include="Styles\JQueryUiBase\jquery.ui.all.css" />
+    <Content Include="Styles\JQueryUiBase\jquery.ui.autocomplete.css" />
+    <Content Include="Styles\JQueryUiBase\jquery.ui.base.css" />
+    <Content Include="Styles\JQueryUiBase\jquery.ui.button.css" />
+    <Content Include="Styles\JQueryUiBase\jquery.ui.core.css" />
+    <Content Include="Styles\JQueryUiBase\jquery.ui.datepicker.css" />
+    <Content Include="Styles\JQueryUiBase\jquery.ui.dialog.css" />
+    <Content Include="Styles\JQueryUiBase\jquery.ui.menu.css" />
+    <Content Include="Styles\JQueryUiBase\jquery.ui.progressbar.css" />
+    <Content Include="Styles\JQueryUiBase\jquery.ui.resizable.css" />
+    <Content Include="Styles\JQueryUiBase\jquery.ui.selectable.css" />
+    <Content Include="Styles\JQueryUiBase\jquery.ui.slider.css" />
+    <Content Include="Styles\JQueryUiBase\jquery.ui.spinner.css" />
+    <Content Include="Styles\JQueryUiBase\jquery.ui.tabs.css" />
+    <Content Include="Styles\JQueryUiBase\jquery.ui.theme.css" />
+    <Content Include="Styles\JQueryUiBase\jquery.ui.tooltip.css" />
+    <Content Include="Styles\style.css" />
+    <Content Include="TreeLineImages\dash.gif" />
+    <Content Include="TreeLineImages\dashminus.gif" />
+    <Content Include="TreeLineImages\dashplus.gif" />
+    <Content Include="TreeLineImages\i.gif" />
+    <Content Include="TreeLineImages\l.gif" />
+    <Content Include="TreeLineImages\lminus.gif" />
+    <Content Include="TreeLineImages\lplus.gif" />
+    <Content Include="TreeLineImages\minus.gif" />
+    <Content Include="TreeLineImages\noexpand.gif" />
+    <Content Include="TreeLineImages\plus.gif" />
+    <Content Include="TreeLineImages\r.gif" />
+    <Content Include="TreeLineImages\rminus.gif" />
+    <Content Include="TreeLineImages\rplus.gif" />
+    <Content Include="TreeLineImages\t.gif" />
+    <Content Include="TreeLineImages\tminus.gif" />
+    <Content Include="TreeLineImages\tplus.gif" />
+    <Content Include="ViewsAspx\AsignacionMenuPerfiles.aspx" />
+    <Content Include="ViewsAspx\CapturaInformacion.aspx" />
+    <Content Include="ViewsAspx\Conciliar.aspx" />
+    <Content Include="ViewsAspx\ConsultaDocsNegocios.aspx" />
+    <Content Include="ViewsAspx\CrearPerfiles.aspx" />
+    <Content Include="ViewsAspx\CrearUsuarios.aspx" />
+    <Content Include="ViewsAspx\IndexacionImg.aspx" />
+    <Content Include="ViewsAspx\Inicio.aspx" />
+    <Content Include="ViewsAspx\PagePDF\build\pdf.js" />
+    <Content Include="ViewsAspx\PagePDF\build\pdf.worker.js" />
+    <Content Include="ViewsAspx\PagePDF\web\compatibility.js" />
+    <Content Include="ViewsAspx\PagePDF\web\debugger.js" />
+    <Content Include="ViewsAspx\PagePDF\web\images\annotation-check.svg" />
+    <Content Include="ViewsAspx\PagePDF\web\images\annotation-comment.svg" />
+    <Content Include="ViewsAspx\PagePDF\web\images\annotation-help.svg" />
+    <Content Include="ViewsAspx\PagePDF\web\images\annotation-insert.svg" />
+    <Content Include="ViewsAspx\PagePDF\web\images\annotation-key.svg" />
+    <Content Include="ViewsAspx\PagePDF\web\images\annotation-newparagraph.svg" />
+    <Content Include="ViewsAspx\PagePDF\web\images\annotation-noicon.svg" />
+    <Content Include="ViewsAspx\PagePDF\web\images\annotation-note.svg" />
+    <Content Include="ViewsAspx\PagePDF\web\images\annotation-paragraph.svg" />
+    <Content Include="ViewsAspx\PagePDF\web\images\findbarButton-next%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\findbarButton-next-rtl%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\findbarButton-next-rtl.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\findbarButton-next.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\findbarButton-previous%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\findbarButton-previous-rtl%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\findbarButton-previous-rtl.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\findbarButton-previous.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\grab.cur" />
+    <Content Include="ViewsAspx\PagePDF\web\images\grabbing.cur" />
+    <Content Include="ViewsAspx\PagePDF\web\images\loading-icon.gif" />
+    <Content Include="ViewsAspx\PagePDF\web\images\loading-small%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\loading-small.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\secondaryToolbarButton-documentProperties%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\secondaryToolbarButton-documentProperties.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\secondaryToolbarButton-firstPage%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\secondaryToolbarButton-firstPage.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\secondaryToolbarButton-handTool%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\secondaryToolbarButton-handTool.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\secondaryToolbarButton-lastPage%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\secondaryToolbarButton-lastPage.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\secondaryToolbarButton-rotateCcw%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\secondaryToolbarButton-rotateCcw.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\secondaryToolbarButton-rotateCw%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\secondaryToolbarButton-rotateCw.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\shadow.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\texture.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-bookmark%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-bookmark.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-download%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-download.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-menuArrows%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-menuArrows.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-openFile%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-openFile.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-pageDown%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-pageDown-rtl%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-pageDown-rtl.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-pageDown.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-pageUp%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-pageUp-rtl%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-pageUp-rtl.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-pageUp.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-presentationMode%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-presentationMode.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-print%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-print.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-search%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-search.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-secondaryToolbarToggle%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-secondaryToolbarToggle-rtl%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-secondaryToolbarToggle-rtl.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-secondaryToolbarToggle.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-sidebarToggle%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-sidebarToggle-rtl%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-sidebarToggle-rtl.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-sidebarToggle.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-viewAttachments%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-viewAttachments.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-viewOutline%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-viewOutline-rtl%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-viewOutline-rtl.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-viewOutline.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-viewThumbnail%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-viewThumbnail.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-zoomIn%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-zoomIn.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-zoomOut%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\toolbarButton-zoomOut.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\treeitem-collapsed%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\treeitem-collapsed-rtl%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\treeitem-collapsed-rtl.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\treeitem-collapsed.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\treeitem-expanded%402x.png" />
+    <Content Include="ViewsAspx\PagePDF\web\images\treeitem-expanded.png" />
+    <Content Include="ViewsAspx\PagePDF\web\l10n.js" />
+    <Content Include="ViewsAspx\PagePDF\web\PDFViewer.aspx" />
+    <Content Include="ViewsAspx\PagePDF\web\viewer.css" />
+    <Content Include="ViewsAspx\PagePDF\web\viewer.js" />
+    <Content Include="ViewsAspx\ReporteContabilizacion.aspx" />
+    <Content Include="ViewsAspx\ReporteEstadoNegocios.aspx" />
+    <Content Include="ViewsAspx\ReporteRadicacion.aspx" />
+    <Content Include="ViewsAspx\ReporteRecepcion.aspx" />
+    <Content Include="ViewsAspx\ReporteResumenNegocios.aspx" />
+    <Content Include="Views\Almacenar\Almacenar.aspx" />
+    <Content Include="Views\Almacenar\CrearUnidad.aspx" />
+    <Content Include="Views\Almacenar\Guardar.aspx" />
+    <Content Include="Views\Archivo\Archivo.aspx" />
+    <Content Include="Views\Archivo\Confirmar.aspx" />
+    <Content Include="Views\CapturaInformacion\Guardar.aspx" />
+    <Content Include="Views\CapturaInformacion\Index.aspx" />
+    <Content Include="Views\Captura\confirmaPagina.aspx" />
+    <Content Include="Views\Captura\ObtenerDListas.aspx" />
+    <Content Include="Views\Consola\Index.aspx" />
+    <Content Include="Views\ContabilizacionMasiva\Index.aspx" />
+    <Content Include="Views\Contabilizar\Index.aspx" />
+    <Content Include="Views\CrearArchivo\CrearArchivo.aspx" />
+    <Content Include="Views\CruceIdentidad\Index.aspx" />
+    <Content Include="Views\CruceIdentidad\GuardarArchivo.aspx" />
+    <Content Include="Views\Dactiloscopia2\Dactiloscopia2.aspx" />
+    <Content Include="Views\Dactiloscopia2\Visores_LD.aspx" />
+    <Content Include="Views\Dactiloscopia2\Visores_TDC.aspx" />
+    <Content Include="Views\Dactiloscopia\Index.aspx" />
+    <Content Include="Views\Dactiloscopia\Noaprobo.aspx" />
+    <Content Include="Views\Dactiloscopia2\VisoresMUL.aspx" />
+    <Content Include="Views\DevolucionEtapa\DevolucionEtapa.aspx" />
+    <Content Include="Views\EdicionIncidentesCaptura\EditarCaptura.aspx" />
+    <Content Include="Views\EdicionIncidentesCaptura\Index.aspx" />
+    <Content Include="Views\EnvioBack\Index.aspx" />
+    <Content Include="Views\EnvioCustodio\Index.aspx" />
+    <Content Include="Views\EnvioFront\Index.aspx" />
+    <Content Include="Views\FinDestruccion\FinDestruccion.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\IndexacionImg\Index.aspx" />
+    <Content Include="Views\IniDestruccion\IniDestruccion.aspx" />
+    <Content Include="Views\Loteo\error.aspx" />
+    <Content Include="Views\Loteo\finalizarImagen.aspx" />
+    <Content Include="Views\Loteo\Index.aspx" />
+    <Content Include="Views\Mesa\Busqueda.aspx" />
+    <Content Include="Views\Mesa\Error.aspx" />
+    <Content Include="Views\Mesa\GuardarCambios.aspx" />
+    <Content Include="Views\Mesa\GuardarCambiosBusqueda.aspx" />
+    <Content Include="Views\Mesa\Index.aspx" />
+    <Content Include="Views\Mesa\ReasignarNegocio.aspx" />
+    <Content Include="Views\MobDatos\Index.aspx" />
+    <Content Include="Views\MobGrillaDatos\Index.aspx" />
+    <Content Include="Views\Mobile\Index.aspx" />
+    <Content Include="Views\Modificar\AjustesDatos.aspx" />
+    <Content Include="Views\Modificar\Anular.aspx" />
+    <Content Include="Views\Modificar\Descontabilizacion.aspx" />
+    <Content Include="Views\Modificar\ejecutarAnulacion.aspx" />
+    <Content Include="Views\Modificar\ModificarCodigoBarras.aspx" />
+    <Content Include="Views\ParametrosGenerales\Index.aspx" />
+    <Content Include="Views\Priorizacion\Index.aspx" />
+    <Content Include="Views\Radicacion\Guardar.aspx" />
+    <Content Include="Views\Radicacion\Index.aspx" />
+    <Content Include="Views\Radicacion\IndexCodigos.aspx" />
+    <Content Include="Views\Recepcion\GuardarRecepcion.aspx" />
+    <Content Include="Views\Recepcion\Index.aspx" />
+    <Content Include="Views\ReIndexacionImg\ReIndexacionImg.aspx" />
+    <Content Include="Views\ReporteCausalesAuto\ReporteCausalesAuto.aspx" />
+    <Content Include="Views\ReporteDocumentosCargados\Index.aspx" />
+    <Content Include="Views\Report\FacturacionIndex.aspx" />
+    <Content Include="Views\Report\Index.aspx" />
+    <Content Include="Views\Report\PivotGridPartial.ascx" />
+    <Content Include="Views\Report\PivotGridPartialFacturacion.ascx" />
+    <Content Include="Views\Report\VariablesFiltrar.aspx" />
+    <Content Include="Views\Report\VerNegocio.aspx" />
+    <Content Include="Views\Roles\Index.aspx" />
+    <Content Include="Views\Seguridad\Login.aspx" />
+    <Content Include="Views\ServicioCargue\Index.aspx" />
+    <Content Include="Views\SolicitudBack\Confirmar.aspx" />
+    <Content Include="Views\SolicitudBack\Index.aspx" />
+    <Content Include="Views\Solicitud\Confirmar.aspx" />
+    <Content Include="Views\Solicitud\Index.aspx" />
+    <Content Include="Views\Suspender\Index.aspx" />
+    <Content Include="Views\Usuarios\CambioContrasena.aspx" />
+    <Content Include="Views\Usuarios\contrasenaerror.aspx" />
+    <Content Include="Views\Usuarios\CreacionExitosa.aspx" />
+    <Content Include="Views\Usuarios\DesbloquearUsuarios.aspx" />
+    <Content Include="Views\Usuarios\ErrorCreacion.aspx" />
+    <Content Include="Views\Usuarios\index.aspx" />
+    <Content Include="Views\Usuarios\NuevoUsuario.aspx" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\ValidacionDocExitosa\ValidacionDocExitosa.aspx" />
+    <Content Include="Views\Val_Documental\confirmaValidacion.aspx" />
+    <Content Include="Views\Val_Documental\Val_Documental.aspx" />
+    <Content Include="Web References\wsLogin\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\wsLogin\SingleSignOn.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\Site1.css" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\SiteMobile.Master" />
+    <None Include="Content\Scripts\ui\jquery-1.10.1.min.map" />
+    <None Include="Properties\PublishProfiles\DeployChile.pubxml" />
+    <None Include="Properties\PublishProfiles\GestorDeploy.pubxml" />
+    <None Include="Styles\BootsTrap\css\bootstrap-theme.css.map" />
+    <None Include="Styles\BootsTrap\css\bootstrap.css.map" />
+    <None Include="Styles\BootsTrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Styles\BootsTrap\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="Styles\BootsTrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Styles\BootsTrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Views\Shared\Captura.Master" />
+    <Content Include="Views\Shared\Home.Master" />
+    <Content Include="Web References\wsLogin\SingleSignOn.wsdl" />
+    <Content Include="Views\Shared\responsive Menu.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\ArchivosVirtuales\" />
+    <Folder Include="App_Data\CargeIdentidad\" />
+    <Folder Include="App_Data\Contabilizacion\" />
+    <Folder Include="App_Data\Log\" />
+    <Folder Include="App_Data\Prestamos\" />
+    <Folder Include="App_Data\Recepcion\" />
+    <Folder Include="bin\de\" />
+    <Folder Include="bin\es\" />
+    <Folder Include="bin\ja\" />
+    <Folder Include="bin\ru\" />
+    <Folder Include="Content\ArchivosCliente\" />
+    <Folder Include="Content\Scripts\upload\" />
+    <Folder Include="Content\Tmp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ViewsAspx\Site1.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\UploadLocalization.zh-CN.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.zh-CN.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\UploadLocalization.ru-RU.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.ru-RU.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\UploadLocalization.pt-PT.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.pt-PT.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\UploadLocalization.pt-BR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.pt-BR.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\UploadLocalization.pl-PL.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.pl-PL.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\UploadLocalization.nl-NL.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.nl-NL.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\UploadLocalization.fr-FR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.fr-FR.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\UploadLocalization.en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.en-US.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\UploadLocalization.da-DK.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.da-DK.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\UploadLocalization.bg-BG.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.bg-BG.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\GridLocalization.zh-CN.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.zh-CN.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\GridLocalization.uk-UA.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.uk-UA.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\GridLocalization.ru-RU.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.ru-RU.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\GridLocalization.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\GridLocalization.pt-PT.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.pt-PT.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\GridLocalization.pt-BR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.pt-BR.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\GridLocalization.pl-PL.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.pl-PL.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\GridLocalization.nl-NL.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.nl-NL.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\GridLocalization.fr-FR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.fr-FR.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\GridLocalization.es-ES.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.es-ES.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\GridLocalization.en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.en-US.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\GridLocalization.de-DE.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.de-DE.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\GridLocalization.da-DK.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.da-DK.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\GridLocalization.bg-BG.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.bg-BG.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\EditorLocalization.zh-CN.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.zh-CN.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\EditorLocalization.uk-UA.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.uk-UA.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\EditorLocalization.ru-RU.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.ru-RU.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\EditorLocalization.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\EditorLocalization.pt-PT.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.pt-PT.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\EditorLocalization.pt-BR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.pt-BR.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\EditorLocalization.pl-PL.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.pl-PL.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\EditorLocalization.nl-NL.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.nl-NL.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\EditorLocalization.fr-FR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.fr-FR.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\EditorLocalization.en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.en-US.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\EditorLocalization.de-DE.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.de-DE.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\EditorLocalization.da-DK.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.da-DK.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\EditorLocalization.bg-BG.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.bg-BG.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Glass\MVCxButton.skin" />
+    <Content Include="Content\Glass\MVCxButtonEdit.skin" />
+    <Content Include="Content\Glass\MVCxCalendar.skin" />
+    <Content Include="Content\Glass\MVCxCallbackPanel.skin" />
+    <Content Include="Content\Glass\MVCxChartControl.skin" />
+    <Content Include="Content\Glass\MVCxCheckBox.skin" />
+    <Content Include="Content\Glass\MVCxCheckBoxList.skin" />
+    <Content Include="Content\Glass\MVCxColorEdit.skin" />
+    <Content Include="Content\Glass\MVCxComboBox.skin" />
+    <Content Include="Content\Glass\MVCxDateEdit.skin" />
+    <Content Include="Content\Glass\MVCxDropDownEdit.skin" />
+    <Content Include="Content\Glass\MVCxGridView.skin" />
+    <Content Include="Content\Glass\MVCxHtmlEditor.skin" />
+    <Content Include="Content\Glass\MVCxHyperLink.skin" />
+    <Content Include="Content\Glass\MVCxLabel.skin" />
+    <Content Include="Content\Glass\MVCxListBox.skin" />
+    <Content Include="Content\Glass\MVCxMemo.skin" />
+    <Content Include="Content\Glass\MVCxMenu.skin" />
+    <Content Include="Content\Glass\MVCxNavBar.skin" />
+    <Content Include="Content\Glass\MVCxPageControl.skin" />
+    <Content Include="Content\Glass\MVCxPivotGrid.skin" />
+    <Content Include="Content\Glass\MVCxPopupControl.skin" />
+    <Content Include="Content\Glass\MVCxProgressBar.skin" />
+    <Content Include="Content\Glass\MVCxRadioButton.skin" />
+    <Content Include="Content\Glass\MVCxRadioButtonList.skin" />
+    <Content Include="Content\Glass\MVCxReportToolbar.skin" />
+    <Content Include="Content\Glass\MVCxReportViewer.skin" />
+    <Content Include="Content\Glass\MVCxRoundPanel.skin" />
+    <Content Include="Content\Glass\MVCxSpinEdit.skin" />
+    <Content Include="Content\Glass\MVCxSplitter.skin" />
+    <Content Include="Content\Glass\MVCxTabControl.skin" />
+    <Content Include="Content\Glass\MVCxTextBox.skin" />
+    <Content Include="Content\Glass\MVCxTimeEdit.skin" />
+    <Content Include="Content\Glass\MVCxTrackBar.skin" />
+    <Content Include="Content\Glass\MVCxTreeView.skin" />
+    <Content Include="Content\Glass\MVCxUploadControl.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Glass\MVCxButton.skin" />
+    <Content Include="App_Themes\Glass\MVCxButtonEdit.skin" />
+    <Content Include="App_Themes\Glass\MVCxCalendar.skin" />
+    <Content Include="App_Themes\Glass\MVCxCallbackPanel.skin" />
+    <Content Include="App_Themes\Glass\MVCxChartControl.skin" />
+    <Content Include="App_Themes\Glass\MVCxCheckBox.skin" />
+    <Content Include="App_Themes\Glass\MVCxCheckBoxList.skin" />
+    <Content Include="App_Themes\Glass\MVCxColorEdit.skin" />
+    <Content Include="App_Themes\Glass\MVCxComboBox.skin" />
+    <Content Include="App_Themes\Glass\MVCxDateEdit.skin" />
+    <Content Include="App_Themes\Glass\MVCxDropDownEdit.skin" />
+    <Content Include="App_Themes\Glass\MVCxGridView.skin" />
+    <Content Include="App_Themes\Glass\MVCxHtmlEditor.skin" />
+    <Content Include="App_Themes\Glass\MVCxHyperLink.skin" />
+    <Content Include="App_Themes\Glass\MVCxLabel.skin" />
+    <Content Include="App_Themes\Glass\MVCxListBox.skin" />
+    <Content Include="App_Themes\Glass\MVCxMemo.skin" />
+    <Content Include="App_Themes\Glass\MVCxMenu.skin" />
+    <Content Include="App_Themes\Glass\MVCxNavBar.skin" />
+    <Content Include="App_Themes\Glass\MVCxPageControl.skin" />
+    <Content Include="App_Themes\Glass\MVCxPivotGrid.skin" />
+    <Content Include="App_Themes\Glass\MVCxPopupControl.skin" />
+    <Content Include="App_Themes\Glass\MVCxProgressBar.skin" />
+    <Content Include="App_Themes\Glass\MVCxRadioButton.skin" />
+    <Content Include="App_Themes\Glass\MVCxRadioButtonList.skin" />
+    <Content Include="App_Themes\Glass\MVCxReportToolbar.skin" />
+    <Content Include="App_Themes\Glass\MVCxReportViewer.skin" />
+    <Content Include="App_Themes\Glass\MVCxRoundPanel.skin" />
+    <Content Include="App_Themes\Glass\MVCxSpinEdit.skin" />
+    <Content Include="App_Themes\Glass\MVCxSplitter.skin" />
+    <Content Include="App_Themes\Glass\MVCxTabControl.skin" />
+    <Content Include="App_Themes\Glass\MVCxTextBox.skin" />
+    <Content Include="App_Themes\Glass\MVCxTimeEdit.skin" />
+    <Content Include="App_Themes\Glass\MVCxTrackBar.skin" />
+    <Content Include="App_Themes\Glass\MVCxTreeView.skin" />
+    <Content Include="App_Themes\Glass\MVCxUploadControl.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\GestorDocuModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GestorDocuModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reportes\Radicacion.rdlc" />
+    <EmbeddedResource Include="Reportes\Recepcion.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteContabilizacion.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://7.215.8.30:97/">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsLogin\</RelPath>
+      <UpdateFromURL>http://7.215.8.30:97/</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GestorDocumental_wsLogin_SingleSignOn</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\Icono.ico</ApplicationIcon>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50977</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50999/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:50999/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

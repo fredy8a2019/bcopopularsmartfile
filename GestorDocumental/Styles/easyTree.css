@@ -1,0 +1,128 @@
+/** Easy Tree style */
+.easy-tree {
+    min-height: 5px;
+    margin-bottom: 5px; /*margen inferior*/
+    color: #24979f; /*color load*/
+    /*color: #246c87;*/
+    border: none;
+    border-top: none;
+    padding-bottom: 15px;
+}
+
+    .easy-tree > ul {
+        padding-left: 10px; /*margen izquierda arbol*/
+    }
+
+    .easy-tree li {
+        /**cambia diseño lateral del arbol/*/
+        list-style-type: disc;
+        margin: 2px;
+        padding: 2px 2px 0 10px;
+        position: relative;
+    }
+
+        .easy-tree li::before, .easy-tree li::after {
+            /**linea lado izq arbol*/
+            content: none;
+            left: -30px;
+            position: absolute;
+            right: auto;
+        }
+
+        .easy-tree li::before {
+            border-left: 1px solid #000;
+            bottom: 50px;
+            height: 100%;
+            top: 0;
+            width: 10px;
+        }
+
+        .easy-tree li::after {
+            border-top: 1px solid #000000;
+            height: 510px;
+            top: 25px;
+            width: 35px;
+            margin: 30px;
+            background: #000;
+        }
+
+        .easy-tree li > span {
+            border: 1px solid #42708a; /*color del borde de los cuadros del arbol*/
+            border-radius: 5px; /*borde cuadros del arbol*/
+            display: inline-block; /*table-row;*/
+            padding: 5px;
+            text-decoration: wavy;
+            background: #c1e0db; /*fondo de los cuadros*/
+        }
+
+        .easy-tree li.parent_li > span {
+            cursor: pointer;
+        }
+
+
+    .easy-tree > ul > li::before, .easy-tree > ul > li::after {
+        border: 0;
+    }
+
+    .easy-tree li:last-child::before {
+        height: 30px;
+    }
+
+    .easy-tree li.parent_li > span:hover, .easy-tree li.parent_li > span:hover + ul li span {
+        background: #c1e0db; /*cambia el color de fondo cuando se pasa el mouse*/
+        color: #246c87; /*color iconos al pasar el mouse*/
+    }
+
+        .easy-tree li.parent_li > span:hover + ul li.li_selected span {
+            /*colores de los hijos al pasar el mouse por el padre*/
+            background: #cdd4d4; /*gris*/
+            color: #246c87; /*icono*/
+        }
+
+    .easy-tree li > span > a {
+        color: #000; /* negro*/ /*color del texo*/
+        text-decoration: none;
+    }
+
+    .easy-tree li > span > span.glyphicon-folder-close, .easy-tree li > span > span.glyphicon-folder-open {
+        margin-right: 5px;
+    }
+
+
+    .easy-tree li.li_selected > span, .easy-tree li.li_selected > span > a {
+        background: #cdd4d4; /*gris*/ /*color del cuadro seleccionado*/
+        color: #000; /*color que queda al seleccionar el arbol*/
+    }
+
+
+        .easy-tree li.li_selected > span:hover, .easy-tree li.li_selected > span:hover > a {
+            /*background: rgba(75, 173, 181, 0.58);*/
+            /*color: #6785C1;*/
+        }
+
+
+    .easy-tree .easy-tree-toolbar {
+        background-color: #fff;
+    }
+
+        .easy-tree .easy-tree-toolbar > div {
+            display: inline-block;
+        }
+
+            .easy-tree .easy-tree-toolbar > div > button {
+                border-radius: 0;
+                margin: 5px 5px;
+            }
+
+        .easy-tree .easy-tree-toolbar .create .input-group {
+            top: -15px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+            .easy-tree .easy-tree-toolbar .create .input-group input {
+                border-radius: 0;
+            }
+
+            .easy-tree .easy-tree-toolbar .create .input-group button {
+                border-radius: 0;

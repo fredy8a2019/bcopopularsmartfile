@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GestorDocumental" Class="BasdatDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.Parametros" Member="Parametros">
+    <Type Name="Parametros">
+      <Column Name="id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="codigo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="valor" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Recepcion" Member="Recepcion">
+    <Type Name="Recepcion">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="subgrupo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="rutaArchConciliacion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="principales" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="fechaRecepcion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="numeroLote" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="idUsuario" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="activo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="estado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fechaCargue" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="nitCliente" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
